@@ -1,5 +1,6 @@
 public class ChessPiece {
-    private int x, y;
+	private int x, y;
+	private int player;
 
     public int getX() {
         return x;
