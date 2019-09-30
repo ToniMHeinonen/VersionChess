@@ -7,7 +7,8 @@ public class Board {
     }
 
     private void initializeChess() {
-
+        addChessPieces(0, 1);
+        addChessPieces(7, 2);
     }
 
     private void addChessPieces(int index, int player) {
