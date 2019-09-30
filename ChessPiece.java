@@ -1,6 +1,7 @@
 public class ChessPiece {
 	private int x, y;
 	private int player;
+	private String symbol;
 
 	public ChessPiece(int x, int y, int player) {
 		this.x = x;
@@ -22,5 +23,13 @@ public class ChessPiece {
 
 	public void setY(int y) {
 		this.y = y;
+	}
+
+	public String getSymbol() {
+		return symbol;
+	}
+
+	public void setSymbol(String symbol) {
+		this.symbol = symbol;
 	}
 }
