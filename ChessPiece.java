@@ -10,9 +10,9 @@ public class ChessPiece {
 	}
 
 	/**
-	 * Get player's symbol.
+	 * Get symbol of the chesspiece.
 	 * 
-	 * @return	player's symbol
+	 * @return symbol of the chesspiece
 	 */
 	public String getSymbol() {
 		return symbol;
