@@ -19,9 +19,9 @@ public class ChessPiece {
 	}
 
 	/**
-	 * Set player's symbol.
+	 * Set symbol of the chesspiece.
 	 * 
-	 * @param symbol player's symbol
+	 * @param symbol symbol of the chesspiece
 	 */
 	public void setSymbol(String symbol) {
 		this.symbol = symbol;
@@ -30,7 +30,7 @@ public class ChessPiece {
 	/**
 	 * Get row of the board.
 	 * 
-	 * @return row of the board.
+	 * @return row of the board
 	 */
 	public int getRow() {
 		return row;
