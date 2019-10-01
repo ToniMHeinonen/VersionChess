@@ -16,6 +16,11 @@ public class Board {
         }
     }
 
+    /**
+     * Adds all chess pieces to the board except pawns.
+     * @param index row to add
+     * @param player which player owns the piece
+     */
     private void addChessPieces(int index, int player) {
         positions[index][0] = new Rook(index, 0, player);
         positions[index][1] = new Knight(index, 1, player);
