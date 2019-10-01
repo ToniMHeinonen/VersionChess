@@ -27,6 +27,11 @@ public class ChessPiece {
 		this.symbol = symbol;
 	}
 
+	/**
+	 * Get row of the board.
+	 * 
+	 * @return row of the board.
+	 */
 	public int getRow() {
 		return row;
 	}
