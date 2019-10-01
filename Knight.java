@@ -1,6 +1,6 @@
 public class Knight extends ChessPiece {
     
-    public Knight(int x, int y, int player) {
-        super(x, y, player);
+    public Knight(int row, int col, int player) {
+        super(row, col, player);
     }
 }

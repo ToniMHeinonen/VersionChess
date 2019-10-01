@@ -1,7 +1,7 @@
 public class Queen extends ChessPiece {
     
-    public Queen(int x, int y, int player) {
-        super(x, y, player);
+    public Queen(int row, int col, int player) {
+        super(row, col, player);
 
         if (player == 1)
             setSymbol("Q");
