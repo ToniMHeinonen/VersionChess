@@ -7,9 +7,11 @@ public class Board {
     }
 
     private void initializeChess() {
+        // Add chess pieces for player 1 and 2
         addChessPieces(0, 1);
         addChessPieces(7, 2);
 
+        // Add pawns for player 1 and 2
         for (int i = 0; i < 8; i++) {
             positions[1][i] = new Pawn(1, i, 1);
             positions[6][i] = new Pawn(6, i, 2);
