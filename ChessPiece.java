@@ -18,6 +18,11 @@ public class ChessPiece {
 		return symbol;
 	}
 
+	/**
+	 * Set player's symbol.
+	 * 
+	 * @param symbol player's symbol
+	 */
 	public void setSymbol(String symbol) {
 		this.symbol = symbol;
 	}
