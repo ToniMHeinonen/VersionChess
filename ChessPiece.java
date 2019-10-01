@@ -36,6 +36,11 @@ public class ChessPiece {
 		return row;
 	}
 
+	/**
+	 * Set row of the board.
+	 * 
+	 * @param row row of the board
+	 */
 	public void setRow(int row) {
 		this.row = row;
 	}
