@@ -7,24 +7,40 @@ public class Board {
     }
 
     private void initializeChess() {
-        addChessPieces(0, 1);
-        addChessPieces(7, 2);
-
-        for (int i = 0; i < 8; i++) {
-            positions[1][i] = new Pawn(1, i, 1);
-            positions[6][i] = new Pawn(6, i, 2);
-        }
+        // Add chess pieces for player 1 and 2
+        addChessPieces(1);
+        addChessPieces(2);
     }
 
-    private void addChessPieces(int index, int player) {
-        positions[index][0] = new Rook(index, 0, player);
-        positions[index][1] = new Knight(index, 1, player);
-        positions[index][2] = new Bishop(index, 2, player);
-        positions[index][3] = new Queen(index, 3, player);
-        positions[index][4] = new King(index, 4, player);
-        positions[index][5] = new Bishop(index, 5, player);
-        positions[index][6] = new Knight(index, 6, player);
-        positions[index][7] = new Rook(index, 7, player);
+    /**
+     * Add chess pieces for players 1 and 2
+     * @param player which player owns the pieces
+     */
+    private void addChessPieces(int player) {
+        int row, pawnRow;
+
+        if (player == 1) {
+            row = 0;
+            pawnRow = 1;
+        } else {
+            row = 7;
+            pawnRow = 6;
+        }
+        
+        positions[row][0] = new Rook(row, 0, player);
+        positions[row][1] = new Knight(row, 1, player);
+        positions[row][2] = new Bishop(row, 2, player);
+        positions[row][3] = new Queen(row, 3, player);
+        positions[row][4] = new King(row, 4, player);
+        positions[row][5] = new Bishop(row, 5, player);
+        positions[row][6] = new Knight(row, 6, player);
+        positions[row][7] = new Rook(row, 7, player);
+
+        // Add pawns for player 1 and 2
+        for (int i = 0; i < 8; i++) {
+            positions[pawnRow][i] = new Pawn(pawnRow, i, 1);
+            positions[pawnRow][i] = new Pawn(pawnRow, i, 2);
+        }
     }
 
     public void play() {

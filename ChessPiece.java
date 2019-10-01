@@ -1,28 +1,12 @@
 public class ChessPiece {
-	private int x, y;
+	private int row, col;
 	private int player;
 	private String symbol;
 
-	public ChessPiece(int x, int y, int player) {
-		this.x = x;
-		this.y = y;
+	public ChessPiece(int row, int col, int player) {
+		this.row = row;
+		this.col = col;
 		this.player = player;
-	}
-
-    public int getX() {
-        return x;
-    }
-
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	public int getY() {
-		return y;
-	}
-
-	public void setY(int y) {
-		this.y = y;
 	}
 
 	public String getSymbol() {
@@ -31,5 +15,29 @@ public class ChessPiece {
 
 	public void setSymbol(String symbol) {
 		this.symbol = symbol;
+	}
+
+	public int getRow() {
+		return row;
+	}
+
+	public void setRow(int row) {
+		this.row = row;
+	}
+
+	public int getCol() {
+		return col;
+	}
+
+	public void setCol(int col) {
+		this.col = col;
+	}
+
+	public int getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(int player) {
+		this.player = player;
 	}
 }
