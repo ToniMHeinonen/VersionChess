@@ -32,4 +32,12 @@ public class ChessPiece {
 	public void setCol(int col) {
 		this.col = col;
 	}
+
+	public int getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(int player) {
+		this.player = player;
+	}
 }
