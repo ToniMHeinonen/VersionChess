@@ -9,6 +9,11 @@ public class ChessPiece {
 		this.player = player;
 	}
 
+	/**
+	 * Get player's symbol.
+	 * 
+	 * @return	player's symbol
+	 */
 	public String getSymbol() {
 		return symbol;
 	}
