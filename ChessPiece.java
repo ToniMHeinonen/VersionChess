@@ -60,4 +60,8 @@ public class ChessPiece {
 	public void setPlayer(int player) {
 		this.player = player;
 	}
+
+	public String toString() {
+		return symbol;
+	}
 }
