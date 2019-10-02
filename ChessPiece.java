@@ -46,7 +46,7 @@ public class ChessPiece {
 	}
 
 	/**
-	 * Get column of the chesspiece
+	 * Get column of the chesspiece.
 	 * 
 	 * @return column of the chesspiece
 	 */
@@ -54,6 +54,11 @@ public class ChessPiece {
 		return col;
 	}
 
+	/**
+	 * Set column of the chesspiece.
+	 * 
+	 * @param col column of the chesspiece
+	 */
 	public void setCol(int col) {
 		this.col = col;
 	}
