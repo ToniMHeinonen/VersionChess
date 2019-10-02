@@ -81,6 +81,9 @@ public class ChessPiece {
 		this.player = player;
 	}
 
+	/**
+	 * Prints symbol of the chesspiece.
+	 */
 	public String toString() {
 		return symbol;
 	}
