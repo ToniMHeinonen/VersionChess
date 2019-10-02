@@ -43,6 +43,10 @@ public class Board {
         }
     }
 
+    private void getNames() {
+        
+    }
+
     public void play() {
 
     }
