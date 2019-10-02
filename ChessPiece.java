@@ -37,9 +37,9 @@ public class ChessPiece {
 	}
 
 	/**
-	 * Set row of the board.
+	 * Set row of the chesspiece.
 	 * 
-	 * @param row row of the board
+	 * @param row row of the chesspiece
 	 */
 	public void setRow(int row) {
 		this.row = row;
