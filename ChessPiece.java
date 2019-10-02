@@ -72,6 +72,11 @@ public class ChessPiece {
 		return player;
 	}
 
+	/**
+	 * Set player 1 or 2.
+	 * 
+	 * @param player player 1 or 2
+	 */
 	public void setPlayer(int player) {
 		this.player = player;
 	}
