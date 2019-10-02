@@ -10,6 +10,7 @@ public abstract class Print {
     }
 
     public static void error(String text) {
-        
+        String border = "!!!";
+        System.out.println(border + " " + text + " " + border);
     }
 }
