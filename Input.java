@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public abstract class Input {
-    Scanner input = new Scanner(System.in);
+    private static Scanner input = new Scanner(System.in);
 
-    public String getString() {
+    public static String getString() {
         String str = "";
 
         while (true) {
