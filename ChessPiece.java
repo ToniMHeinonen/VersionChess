@@ -45,6 +45,11 @@ public class ChessPiece {
 		this.row = row;
 	}
 
+	/**
+	 * Get column of the chesspiece
+	 * 
+	 * @return column of the chesspiece
+	 */
 	public int getCol() {
 		return col;
 	}
