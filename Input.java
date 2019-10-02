@@ -4,6 +4,18 @@ public abstract class Input {
     Scanner input = new Scanner(System.in);
 
     public String getString() {
-        return "";
+        String str = "";
+
+        while (true) {
+            str = input.nextLine();
+
+            if (str.equals("") || str.startsWith(" ")) {
+                // Print error
+            } else {
+                break;
+            }
+        }
+
+        return str;
     }
 }
