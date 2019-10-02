@@ -44,7 +44,7 @@ public class Board {
     }
 
     private void getNames() {
-        
+        Print.msg("Give name to player 1:");
     }
 
     public void play() {
