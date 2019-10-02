@@ -28,9 +28,9 @@ public class ChessPiece {
 	}
 
 	/**
-	 * Get row of the board.
+	 * Get row of the chesspiece.
 	 * 
-	 * @return row of the board
+	 * @return row of the chesspiece
 	 */
 	public int getRow() {
 		return row;
