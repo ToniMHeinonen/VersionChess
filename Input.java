@@ -10,7 +10,7 @@ public abstract class Input {
             str = input.nextLine();
 
             if (str.equals("") || str.startsWith(" ")) {
-                // Print error
+                Print.error("Name not allowed");
             } else {
                 break;
             }
