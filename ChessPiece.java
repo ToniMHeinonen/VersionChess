@@ -63,6 +63,11 @@ public class ChessPiece {
 		this.col = col;
 	}
 
+	/**
+	 * Get player 1 or 2.
+	 * 
+	 * @return player 1 or 2
+	 */
 	public int getPlayer() {
 		return player;
 	}
