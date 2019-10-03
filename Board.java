@@ -8,6 +8,8 @@ public class Board {
     }
 
     private void initializeChess() {
+        getNames();
+        
         // Add chess pieces for player 1 and 2
         addChessPieces(1);
         addChessPieces(2);
