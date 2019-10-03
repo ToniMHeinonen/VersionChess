@@ -18,5 +18,12 @@ public class Main {
                 choices = false;
             }
         }
+        switch (choice) {
+
+            case 1: {
+                Board chess = new Board();
+                chess.play();
+            }
+        }
     }
 }
