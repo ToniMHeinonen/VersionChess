@@ -88,6 +88,10 @@ public class ChessPiece {
 	 * Prints symbol of the chesspiece.
 	 */
 	public String toString() {
-		return symbol;
+		if (this.player == 1) {
+			return P1COLOR + symbol + RESET_COLOR;
+		} else {
+			return P2COLOR + symbol + RESET_COLOR;
+		}
 	}
 }
