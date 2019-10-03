@@ -4,6 +4,7 @@ public class ChessPiece {
 	private String symbol;
 	public static final String P1COLOR = "\u001B[34m";
 	public static final String P2COLOR = "\u001B[31m";
+	public static final String RESET_COLOR = "\u001B[0m";
 
 	public ChessPiece(int row, int col, Player player) {
 		this.row = row;
