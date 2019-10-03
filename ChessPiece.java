@@ -2,6 +2,7 @@ public class ChessPiece {
 	private int row, col;
 	private Player player;
 	private String symbol;
+	public static final String P1COLOR = "\u001B[34m";
 
 	public ChessPiece(int row, int col, Player player) {
 		this.row = row;
