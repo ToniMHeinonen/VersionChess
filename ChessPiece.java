@@ -85,7 +85,8 @@ public class ChessPiece {
 	}
 
 	/**
-	 * Prints symbol of the chesspiece.
+	 * Returns color of the symbol in blue for player 1
+	 * and red for AI/player 2. Then it changes text back to default.
 	 */
 	public String toString() {
 		if (this.player == 1) {
