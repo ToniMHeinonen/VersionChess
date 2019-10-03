@@ -23,8 +23,6 @@ public class Main {
             case 1: {
                 Board chess = new Board();
                 chess.play();
-
-                break;
             }
 
             case 2: {
@@ -33,8 +31,7 @@ public class Main {
             }
 
             case 3: {
-
-                break;
+                System.exit(0);
             }
         }
     }
