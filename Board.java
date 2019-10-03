@@ -1,6 +1,7 @@
 public class Board {
 
     private ChessPiece[][] positions = new ChessPiece[8][8];
+    private Player[] players = new Player[2];
 
     public Board() {
         initializeChess();
