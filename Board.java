@@ -19,7 +19,7 @@ public class Board {
      * Add chess pieces for players 1 and 2
      * @param player which player owns the pieces
      */
-    private void addChessPieces(int player) {
+    private void addChessPieces(Player player) {
         int row, pawnRow;
 
         if (player == 1) {

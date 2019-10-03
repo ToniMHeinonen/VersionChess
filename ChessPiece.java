@@ -1,9 +1,9 @@
 public class ChessPiece {
 	private int row, col;
-	private int player;
+	private Player player;
 	private String symbol;
 
-	public ChessPiece(int row, int col, int player) {
+	public ChessPiece(int row, int col, Player player) {
 		this.row = row;
 		this.col = col;
 		this.player = player;
