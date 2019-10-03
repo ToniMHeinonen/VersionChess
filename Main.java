@@ -27,7 +27,11 @@ public class Main {
 
             case 2: {
                 System.out.println("           OBJECTIVE               ");
-
+                System.out.println("    Objective is to checkmate your ");
+                System.out.println("    opponent's King.               ");
+                System.out.println("    When a King cannot avoid  and  ");
+                System.out.println("    capture then it is checkmated  ");
+                System.out.println("    the game is immediately over.  ");
 
                 break;
             }
