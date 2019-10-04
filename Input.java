@@ -19,8 +19,11 @@ public abstract class Input {
         return str;
     }
 
-    public static int getInt(int min, int max) {
+    public static int getInt(int min, int max, String error) {
         int number;
+
+        if (error == null)
+            error = "Number not allowed";
 
         while (true) {
             number = input.nextInt();
@@ -28,7 +31,7 @@ public abstract class Input {
             if (number >= min && number <= max) {
                 break;
             } else {
-                Print.error("Number not allowed");
+                Print.error(error);
             }
         }
 
