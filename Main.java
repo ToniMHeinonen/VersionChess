@@ -14,7 +14,6 @@ public class Main {
 
             case 2: {
                 Print.information();
-                break;
             }
 
             case 3: {

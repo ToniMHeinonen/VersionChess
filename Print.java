@@ -50,10 +50,8 @@ public abstract class Print {
 
     /**
      * Prints information about rules/chess/how to play
-     * and then calls Main class.
      */
     public static void information() {
         System.out.println("Information about chess.");
-        Main.main(null);
     }
 }
