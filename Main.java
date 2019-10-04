@@ -9,15 +9,8 @@ public class Main {
         System.out.println("*    3.        Quit             *");
         System.out.println("*********************************");
         System.out.println("Please select one of the options (1-3): ");
-        boolean choices = true;
-        while (choices) {
-            choice = Helpers.inputInt();
-            if (choice > 3 || choice < 1) {
-                System.out.println("Invalid input! Choose one of the three options.");
-            } else {
-                choices = false;
-            }
-        }
+        choice = Input.getInt(1, 3, "Invalid input! Choose one of the three options.");
+
         switch (choice) {
 
             case 1: {
