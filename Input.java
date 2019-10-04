@@ -35,6 +35,9 @@ public abstract class Input {
             }
         }
 
+        // Catch the newline generated from input.nextInt()
+        input.nextLine();
+
         return number;
     }
 }
