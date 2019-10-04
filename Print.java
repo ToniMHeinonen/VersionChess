@@ -47,4 +47,8 @@ public abstract class Print {
 
         System.out.println("________________");
     }
+
+    public static void information() {
+        System.out.println("Information about chess.");
+    }
 }
