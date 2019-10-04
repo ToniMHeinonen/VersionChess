@@ -35,9 +35,6 @@ public abstract class Input {
             }
         }
 
-        // Catch the newline generated rom input.nextInt()
-        input.nextLine();
-
         return number;
     }
 }
