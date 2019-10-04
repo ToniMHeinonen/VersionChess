@@ -48,6 +48,10 @@ public abstract class Print {
         System.out.println("________________");
     }
 
+    /**
+     * Prints information about rules/chess/how to play
+     * and then calls Main class.
+     */
     public static void information() {
         System.out.println("Information about chess.");
         Main.main(null);
