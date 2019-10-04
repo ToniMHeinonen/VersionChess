@@ -14,7 +14,27 @@ public abstract class Print {
         System.out.println(border + " " + text + " " + border);
     }
 
-    public static void board(ChessPiece[] positions) {
+    public static void board(ChessPiece[][] positions) {
+        System.out.println("________________");
         
+        for (int row = 0; row < positions.length; row++) {
+            
+            for (int col = 0; col < positions[row].length; col++) {
+                System.out.print("|");
+                String slot;
+                ChessPiece p = positions[row][col];
+
+                if (p == null)
+                    slot = " ";
+                else
+                    slot = p.toString();
+
+                System.out.print(slot);
+            }
+
+            System.out.println("|");
+        }
+
+        System.out.println("________________");
     }
 }
