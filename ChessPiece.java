@@ -89,7 +89,7 @@ public class ChessPiece {
 	 * and red for AI/player 2. Then it changes text back to default.
 	 */
 	public String toString() {
-		if (this.player == 1) {
+		if (this.player.getNumber() == 1) {
 			return P1COLOR + symbol + RESET_COLOR;
 		} else {
 			return P2COLOR + symbol + RESET_COLOR;
