@@ -13,4 +13,8 @@ public abstract class Print {
         String border = "!!!";
         System.out.println(border + " " + text + " " + border);
     }
+
+    public static void board(ChessPiece[] positions) {
+        
+    }
 }
