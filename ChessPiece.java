@@ -71,7 +71,7 @@ public class ChessPiece {
 	 * 
 	 * @return player 1 or 2
 	 */
-	public int getPlayer() {
+	public Player getPlayer() {
 		return player;
 	}
 
@@ -80,7 +80,7 @@ public class ChessPiece {
 	 * 
 	 * @param player player 1 or 2
 	 */
-	public void setPlayer(int player) {
+	public void setPlayer(Player player) {
 		this.player = player;
 	}
 
