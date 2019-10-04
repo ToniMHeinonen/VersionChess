@@ -47,6 +47,9 @@ public class Board {
 
     private void getNames() {
         Print.msg("Give name to player 1:");
+        players[0] = new Player(Input.getString(), 1);
+        Print.msg("Give name to player 2:");
+        players[1] = new Player(Input.getString(), 2);
     }
 
     public void play() {
