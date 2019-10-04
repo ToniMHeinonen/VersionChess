@@ -12,8 +12,7 @@ public class Main {
             }
 
             case 2: {
-
-                break;
+                Print.information();
             }
 
             case 3: {
