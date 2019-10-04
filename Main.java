@@ -9,10 +9,12 @@ public class Main {
             case 1: {
                 Board chess = new Board();
                 chess.play();
+                break;
             }
 
             case 2: {
                 Print.information();
+                break;
             }
 
             case 3: {
