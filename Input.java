@@ -18,4 +18,8 @@ public abstract class Input {
 
         return str;
     }
+
+    public static int getInt(int min, int max) {
+        
+    }
 }
