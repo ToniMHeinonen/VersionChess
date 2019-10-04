@@ -50,5 +50,6 @@ public abstract class Print {
 
     public static void information() {
         System.out.println("Information about chess.");
+        Main.main(null);
     }
 }
