@@ -1,5 +1,9 @@
 public abstract class Print {
     
+    public static void startScreen() {
+        
+    }
+    
     /** 
      * Prints provided text surrounded by borders.
      * @param text to print
