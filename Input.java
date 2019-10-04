@@ -20,6 +20,18 @@ public abstract class Input {
     }
 
     public static int getInt(int min, int max) {
-        
+        int number;
+
+        while (true) {
+            number = input.nextInt();
+
+            if (number >= min && number <= max) {
+                break;
+            } else {
+                Print.error("Number not allowed");
+            }
+        }
+
+        return number;
     }
 }
