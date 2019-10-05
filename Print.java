@@ -25,7 +25,7 @@ public abstract class Print {
     }
 
     public static void board(ChessPiece[][] positions) {
-        System.out.println("________________");
+        System.out.println("_________________");
         
         for (int row = 0; row < positions.length; row++) {
             
@@ -44,8 +44,13 @@ public abstract class Print {
 
             System.out.println("|");
         }
-
-        System.out.println("________________");
+        
+        // Print overline on the bottom
+        String o = "\u203E";
+        for (int i = 0; i < 17; i++)
+            System.out.print(o);
+        
+        System.out.println();
     }
 
     /**
