@@ -40,4 +40,8 @@ public abstract class Input {
 
         return number;
     }
+
+    public static void waitForEnter() {
+        
+    }
 }
