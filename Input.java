@@ -41,7 +41,10 @@ public abstract class Input {
         return number;
     }
 
-    public static void waitForEnter() {
+    public static void waitForEnter(String msg) {
+        if (msg != null)
+            Print.msg(msg);
         
+        input.nextLine();
     }
 }
