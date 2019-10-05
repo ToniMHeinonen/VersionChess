@@ -7,6 +7,11 @@ public class Board {
         initializeChess();
     }
 
+    /**
+     * Creates the board and players
+     * 
+     * Gets the player names from the user and adds the chess pieces.
+     */
     private void initializeChess() {
         getNames();
         
