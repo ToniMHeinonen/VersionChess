@@ -5,6 +5,11 @@ public class Board {
     public static final int A = 0, B = 1, C = 2, D = 3, E = 4, F = 5,
                             G = 6, H = 7;
     private Player playerTurn;
+    /*
+    moveFrom[] contains two values: column and row.
+    These values are the chesspiece's position, which
+    player wants to move.
+    */
     private int moveFrom[];
 
     public Board() {
