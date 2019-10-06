@@ -60,6 +60,6 @@ public class Board {
     }
 
     public void play() {
-
+        Print.board(positions);
     }
 }
