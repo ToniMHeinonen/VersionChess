@@ -4,6 +4,7 @@ public class Board {
     private Player[] players = new Player[2];
     public static final int A = 0, B = 1, C = 2, D = 3, E = 4, F = 5,
                             G = 6, H = 7;
+    private int playerTurn = 1;
 
     public Board() {
         initializeChess();
@@ -61,5 +62,13 @@ public class Board {
 
     public void play() {
         Print.board(positions);
+    }
+
+    public int getPlayerTurn() {
+        return playerTurn;
+    }
+
+    public void setPlayerTurn(int playerTurn) {
+        this.playerTurn = playerTurn;
     }
 }
