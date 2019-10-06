@@ -48,6 +48,13 @@ public abstract class Input {
         input.nextLine();
     }
 
+    /**
+     * Get position of the chesspiece that players wants to move.
+     * (Currently program crashes, if you give values that are 0 or 1
+     * characters long.)
+     * 
+     * @return position of the chesspiece that players wants to move
+     */
     public static int[] getMoveFrom() {
         String str = "";
         int col;
