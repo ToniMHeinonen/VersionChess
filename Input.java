@@ -49,5 +49,25 @@ public abstract class Input {
     }
 
     public static int[] getMoveFrom() {
+        String str = "";
+        int col;
+        int row;
+        int[] moveFrom = new int[2];
+
+        while(true) {
+            str = input.nextLine();
+            col = Character.getNumericValue(str.charAt(0)) - 9;
+            row = Character.getNumericValue(str.charAt(1));
+
+            if (str.length() > 2 || str.length() < 1 || col > 7 || col < 1 || row > 7 || row < 1) {
+                Print.error("Give valid value.");
+            } else {
+                break;
+            }
+        }
+
+        moveFrom[0] = col;
+        moveFrom[1] = row;
+        return moveFrom;
     }
 }
