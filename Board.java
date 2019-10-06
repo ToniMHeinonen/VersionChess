@@ -16,7 +16,7 @@ public class Board {
      * Gets the player names from the user and adds the chess pieces.
      */
     private void initializeChess() {
-        getNames();
+        initializePlayers();
         
         // Add chess pieces for player 1 and 2
         addChessPieces();
@@ -53,7 +53,7 @@ public class Board {
         }   
     }
 
-    private void getNames() {
+    private void initializePlayers() {
         Print.msg("Give name to player 1:");
         players[0] = new Player(Input.getString(), 1);
         Print.msg("Give name to player 2:");
