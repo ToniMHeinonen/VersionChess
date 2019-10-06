@@ -89,6 +89,9 @@ public class Board {
             playerTurn = players[0];
     }
 
+    /**
+     * Get position of the chesspiece that players wants to move.
+     */
     public void moveFrom() {
         Print.msg(playerTurn.getName() + 
         ", which chesspiece do you want to move? (A7, for example)");
