@@ -68,6 +68,12 @@ public class Board {
         return playerTurn;
     }
 
+    /**
+     * Change turn
+     * 
+     * If it's currently player one's turn, change to player two
+     * and vice versa.
+     */
     public void nextTurn() {
         if (playerTurn == players[0])
             playerTurn = players[1];
