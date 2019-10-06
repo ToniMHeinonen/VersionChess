@@ -47,4 +47,7 @@ public abstract class Input {
         
         input.nextLine();
     }
+
+    public static int[] getMoveFrom() {
+    }
 }
