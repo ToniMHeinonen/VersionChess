@@ -68,7 +68,10 @@ public class Board {
         return playerTurn;
     }
 
-    public void setPlayerTurn(Player playerTurn) {
-        this.playerTurn = playerTurn;
+    public void nextTurn() {
+        if (playerTurn == players[0])
+            playerTurn = players[1];
+        else
+            playerTurn = players[0];
     }
 }
