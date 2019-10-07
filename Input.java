@@ -75,6 +75,8 @@ public abstract class Input {
 
         moveFrom[0] = col;
         moveFrom[1] = row;
+        // moveFrom[0] = column of the piece that player wants to move.
+        // moveFrom[1] = row of the piece that player wants to move.
         return moveFrom;
     }
 }
