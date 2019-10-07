@@ -6,7 +6,7 @@ public class Board {
                             G = 6, H = 7;
     private Player playerTurn;
     /*
-    moveFrom[] contains two values: column and row.
+    moveFromColRow[] contains two values: column and row.
     These values are the chesspiece's position, which
     player wants to move.
     */
