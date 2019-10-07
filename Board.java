@@ -95,6 +95,6 @@ public class Board {
     public void moveFrom() {
         Print.msg(playerTurn.getName() + 
         ", which chesspiece do you want to move? (A7, for example)");
-        moveFromColRow = Input.getMoveFrom();
+        moveFromColRow = Input.getMoveFromColRow();
     }
 }
