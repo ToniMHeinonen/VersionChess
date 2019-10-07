@@ -10,7 +10,7 @@ public class Board {
     These values are the chesspiece's position, which
     player wants to move.
     */
-    private int moveFrom[];
+    private int moveFromColRow[];
 
     public Board() {
         initializeChess();
@@ -95,6 +95,6 @@ public class Board {
     public void moveFrom() {
         Print.msg(playerTurn.getName() + 
         ", which chesspiece do you want to move? (A7, for example)");
-        moveFrom = Input.getMoveFrom();
+        moveFromColRow = Input.getMoveFrom();
     }
 }
