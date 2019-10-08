@@ -25,10 +25,12 @@ public abstract class Print {
     }
 
     public static void board(ChessPiece[][] positions) {
-        System.out.println("_________________");
+        System.out.println("   A B C D E F G H");
+        System.out.println("  _________________");
         
         for (int row = 0; row < positions.length; row++) {
-            
+            System.out.print((row+1) + " ");    // Print row number
+
             for (int col = 0; col < positions[row].length; col++) {
                 System.out.print("|");
                 String slot;
@@ -47,6 +49,7 @@ public abstract class Print {
         
         // Print overline on the bottom
         String o = "\u203E";
+        System.out.print("  "); //  Print space before overline
         for (int i = 0; i < 17; i++)
             System.out.print(o);
         
