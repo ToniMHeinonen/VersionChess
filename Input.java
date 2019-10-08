@@ -79,4 +79,10 @@ public abstract class Input {
         // moveFrom[1] = row of the piece that player wants to move.
         return moveFrom;
     }
+
+    public static int[] getMoveToColRow() {
+        int[] moveTo = new int[2];
+
+        return moveTo;
+    }
 }
