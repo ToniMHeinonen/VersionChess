@@ -7,6 +7,10 @@ public class Player {
         this.number = number;
     }
 
+    /**
+     * Get player's name.
+     * @return player's name
+     */
     public String getName() {
         return name;
     }
