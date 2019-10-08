@@ -93,9 +93,23 @@ public class Board {
      * Get position of the chesspiece that players wants to move.
      */
     public void moveFrom() {
-        Print.msg(playerTurn.getName() + 
-        ", which chesspiece do you want to move? (A7, for example)");
-        moveFromColRow = Input.getSelectedPosition();
+        while (true) {
+            Print.msg(playerTurn.getName() + 
+            ", which chesspiece do you want to move? (A7, for example)");
+            
+            moveFromColRow = Input.getSelectedPosition();
+            int row = moveFromColRow[0];
+            int col = moveFromColRow[1];
+            ChessPiece position = positions[row][col];
+
+            if (position == null) {
+                Print.error("Position is empty");
+            } else if (position.getPlayer() == playerTurn) {
+                break;
+            } else if (position.getPlayer() != playerTurn) {
+                Print.error("That is not your chess piece");
+            }
+        }
     }
 
     public void moveTo() {
