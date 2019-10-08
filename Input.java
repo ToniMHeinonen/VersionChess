@@ -73,6 +73,7 @@ public abstract class Input {
             }
         }
 
+        // Decrease values by 1 since arrays use values 0-7 and player 1-8
         moveFrom[0] = row-1;
         moveFrom[1] = col-1;
         // moveFrom[0] = row of the piece that player wants to move.
