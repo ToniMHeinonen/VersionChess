@@ -55,7 +55,7 @@ public abstract class Input {
      * 
      * @return position of the chesspiece that players wants to move
      */
-    public static int[] getMoveFromColRow() {
+    public static int[] getSelectedPosition() {
         String str = "";
         int col;
         int row;
