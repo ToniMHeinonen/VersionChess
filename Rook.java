@@ -11,4 +11,8 @@ public class Rook extends ChessPiece {
         else
             setSymbol("r");
     }
+
+    public boolean canMove() {
+        return true;
+    }
 }

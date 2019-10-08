@@ -11,4 +11,8 @@ public class Knight extends ChessPiece {
         else
             setSymbol("h");
     }
+
+    public boolean canMove() {
+        return true;
+    }
 }

@@ -8,4 +8,8 @@ public class Bishop extends ChessPiece {
         else
             setSymbol("b");
     }
+
+    public boolean canMove() {
+        return true;
+    }
 }

@@ -9,6 +9,8 @@ public abstract class ChessPiece {
 		this.player = player;
 	}
 
+	public abstract boolean canMove();
+
 	/**
 	 * Get symbol of the chesspiece.
 	 * 

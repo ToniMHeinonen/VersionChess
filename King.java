@@ -11,4 +11,8 @@ public class King extends ChessPiece {
         else
             setSymbol("k");
     }
+
+    public boolean canMove() {
+        return true;
+    }
 }
