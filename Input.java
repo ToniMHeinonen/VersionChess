@@ -57,17 +57,22 @@ public abstract class Input {
      */
     public static int[] getSelectedPosition() {
         String str = "";
-        int col;
-        int row;
+        int col = 0;
+        int row = 0;
         int[] moveFrom = new int[2];
 
         while(true) {
             str = input.nextLine();
-            col = Character.getNumericValue(str.charAt(0)) - 9;
-            row = Character.getNumericValue(str.charAt(1));
 
-            if (str.length() > 2 || str.length() < 1 || col > 8 || col < 1 || row > 8 || row < 1) {
+            if(str.length() > 2 || str.length() <= 1) {
                 Print.error("Give valid value.");
+            } else {
+                col = Character.getNumericValue(str.charAt(0)) - 9;
+                row = Character.getNumericValue(str.charAt(1));
+            }
+
+            if (col > 8 || col < 1 || row > 8 || row < 1) {
+                Print.error("Out of bounds.");
             } else {
                 break;
             }
