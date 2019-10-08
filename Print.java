@@ -28,7 +28,7 @@ public abstract class Print {
         System.out.println("   A B C D E F G H");
         System.out.println("  _________________");
         
-        for (int row = 0; row < positions.length; row++) {
+        for (int row = positions.length-1; row >= 0; row--) {
             System.out.print((row+1) + " ");    // Print row number
 
             for (int col = 0; col < positions[row].length; col++) {
