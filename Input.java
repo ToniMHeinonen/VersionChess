@@ -50,8 +50,6 @@ public abstract class Input {
 
     /**
      * Get position of the chesspiece that players wants to move.
-     * (Currently program crashes, if you give values that are 0 or 1
-     * characters long.)
      * 
      * @return position of the chesspiece that players wants to move
      */
