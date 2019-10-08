@@ -100,5 +100,6 @@ public class Board {
 
     public void moveTo() {
         Print.msg("Where do you want to move it? (A7, for example)");
+        moveToColRow = Input.getSelectedPosition();
     }
 }
