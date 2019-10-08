@@ -15,6 +15,10 @@ public class Player {
         return name;
     }
 
+    /**
+     * Set player's name.
+     * @param name player's name
+     */
     public void setName(String name) {
         this.name = name;
     }
