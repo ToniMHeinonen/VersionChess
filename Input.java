@@ -66,7 +66,7 @@ public abstract class Input {
             col = Character.getNumericValue(str.charAt(0)) - 9;
             row = Character.getNumericValue(str.charAt(1));
 
-            if (str.length() > 2 || str.length() < 1 || col > 7 || col < 1 || row > 7 || row < 1) {
+            if (str.length() > 2 || str.length() < 1 || col > 8 || col < 1 || row > 8 || row < 1) {
                 Print.error("Give valid value.");
             } else {
                 break;
