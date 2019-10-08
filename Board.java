@@ -10,7 +10,7 @@ public class Board {
     These values are the chesspiece's position, which
     player wants to move.
     */
-    private int moveFromColRow[];
+    private int[] moveFromColRow, moveToColRow;
 
     public Board() {
         initializeChess();
