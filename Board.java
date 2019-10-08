@@ -97,4 +97,8 @@ public class Board {
         ", which chesspiece do you want to move? (A7, for example)");
         moveFromColRow = Input.getMoveFromColRow();
     }
+
+    public void moveTo() {
+
+    }
 }
