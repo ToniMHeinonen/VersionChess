@@ -1,4 +1,4 @@
-public class ChessPiece {
+public abstract class ChessPiece {
 	private int row, col;
 	private Player player;
 	private String symbol;
