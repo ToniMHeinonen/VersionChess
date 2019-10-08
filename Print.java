@@ -19,6 +19,10 @@ public abstract class Print {
         System.out.println(border + " " + text + " " + border);
     }
 
+    /**
+     * Prints provided error text surrounded by borders.
+     * @param text to print
+     */
     public static void error(String text) {
         String border = "!!!";
         System.out.println(border + " " + text + " " + border);
