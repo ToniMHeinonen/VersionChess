@@ -24,15 +24,17 @@ public class Rook extends ChessPiece {
         // pieces in the way. (missing the condition, when there is other
         // player's piece to be eaten)
         if (colAmount != 0 && rowAmount == 0) {
+            // Rook is moving to right
             if (colAmount > 0) {
                 for (int i = 1; i <= colAmount; i++) {
-                    if (positions[row+i][col] != null) {
+                    if (positions[row][col+i] != null) {
                         return false;
                     }
                 }
+            // Rook is moving to left
             } else {
                 for (int i = -1; i >= colAmount; i--) {
-                    if (positions[row+i][col] != null) {
+                    if (positions[row][col+i] != null) {
                         return false;
             }
         }
