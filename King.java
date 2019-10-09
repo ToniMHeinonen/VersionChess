@@ -12,6 +12,10 @@ public class King extends ChessPiece {
             setSymbol("k");
     }
 
+    /**
+     * Determines how King can move
+     * @return boolean-type if King moves.
+     */
     public boolean canMove() {
         return true;
     }
