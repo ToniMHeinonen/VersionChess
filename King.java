@@ -19,4 +19,8 @@ public class King extends ChessPiece {
     public boolean canMove() {
         return true;
     }
+
+    public boolean eat() {
+        return true;
+    }
 }
