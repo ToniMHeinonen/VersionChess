@@ -11,4 +11,8 @@ public class Pawn extends ChessPiece {
         else
             setSymbol("p");
     }
+
+    public boolean canMove() {
+        return true;
+    }
 }

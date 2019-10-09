@@ -1,16 +1,15 @@
-public class ChessPiece {
+public abstract class ChessPiece {
 	private int row, col;
 	private Player player;
 	private String symbol;
-	public static final String P1COLOR = "\u001B[34m"; // Blue
-	public static final String P2COLOR = "\u001B[31m"; // Red
-	public static final String RESET_COLOR = "\u001B[0m"; // Reset back to default
 
 	public ChessPiece(int row, int col, Player player) {
 		this.row = row;
 		this.col = col;
 		this.player = player;
 	}
+
+	public abstract boolean canMove();
 
 	/**
 	 * Get symbol of the chesspiece.
@@ -71,7 +70,7 @@ public class ChessPiece {
 	 * 
 	 * @return player 1 or 2
 	 */
-	public int getPlayer() {
+	public Player getPlayer() {
 		return player;
 	}
 
@@ -80,19 +79,11 @@ public class ChessPiece {
 	 * 
 	 * @param player player 1 or 2
 	 */
-	public void setPlayer(int player) {
+	public void setPlayer(Player player) {
 		this.player = player;
 	}
 
-	/**
-	 * Returns color of the symbol in blue for player 1
-	 * and red for AI/player 2. Then it changes text back to default.
-	 */
 	public String toString() {
-		if (this.player == 1) {
-			return P1COLOR + symbol + RESET_COLOR;
-		} else {
-			return P2COLOR + symbol + RESET_COLOR;
-		}
+		return symbol;
 	}
 }

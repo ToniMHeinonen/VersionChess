@@ -2,13 +2,27 @@ public class Board {
 
     private ChessPiece[][] positions = new ChessPiece[8][8];
     private Player[] players = new Player[2];
+    public static final int A = 0, B = 1, C = 2, D = 3, E = 4, F = 5,
+                            G = 6, H = 7;
+    private Player playerTurn;
+    /*
+    moveFromColRow[] contains two values: column and row.
+    These values are the chesspiece's position, which
+    player wants to move.
+    */
+    private int[] moveFromColRow, moveToColRow;
 
     public Board() {
         initializeChess();
     }
 
+    /**
+     * Creates the board and players
+     * 
+     * Gets the player names from the user and adds the chess pieces.
+     */
     private void initializeChess() {
-        getNames();
+        initializePlayers();
         
         // Add chess pieces for player 1 and 2
         addChessPieces();
@@ -45,11 +59,61 @@ public class Board {
         }   
     }
 
-    private void getNames() {
+    private void initializePlayers() {
         Print.msg("Give name to player 1:");
+        players[0] = new Player(Input.getString(), 1);
+        Print.msg("Give name to player 2:");
+        players[1] = new Player(Input.getString(), 2);
+        playerTurn = players[0];
     }
 
     public void play() {
+        Print.board(positions);
+        moveFrom();
+    }
 
+    public Player getPlayerTurn() {
+        return playerTurn;
+    }
+
+    /**
+     * Change turn
+     * 
+     * If it's currently player one's turn, change to player two
+     * and vice versa.
+     */
+    public void nextTurn() {
+        if (playerTurn == players[0])
+            playerTurn = players[1];
+        else
+            playerTurn = players[0];
+    }
+
+    /**
+     * Get position of the chesspiece that players wants to move.
+     */
+    public void moveFrom() {
+        Print.msg(playerTurn.getName() + 
+            ", which chesspiece do you want to move? (A7, for example)");
+        
+        while (true) { 
+            moveFromColRow = Input.getSelectedPosition();
+            int row = moveFromColRow[0];
+            int col = moveFromColRow[1];
+            ChessPiece position = positions[row][col];
+
+            if (position == null) {
+                Print.error("Position is empty");
+            } else if (position.getPlayer() == playerTurn) {
+                break;
+            } else if (position.getPlayer() != playerTurn) {
+                Print.error("That is not your chess piece");
+            }
+        }
+    }
+
+    public void moveTo() {
+        Print.msg("Where do you want to move it? (A7, for example)");
+        moveToColRow = Input.getSelectedPosition();
     }
 }

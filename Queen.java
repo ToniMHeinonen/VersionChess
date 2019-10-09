@@ -11,4 +11,8 @@ public class Queen extends ChessPiece {
         else
             setSymbol("q");
     }
+
+    public boolean canMove() {
+        return true;
+    }
 }
