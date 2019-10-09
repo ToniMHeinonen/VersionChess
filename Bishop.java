@@ -17,6 +17,10 @@ public class Bishop extends ChessPiece {
         return true;
     }
 
+    /**
+     * Determines if Bishop can eat opponents piece.
+     * @return returns true if Bishop can eat.
+     */
     public boolean eat() {
         return true;
     }
