@@ -9,6 +9,11 @@ public abstract class ChessPiece {
 		this.player = player;
 	}
 
+    /**
+     * Checks if you can eat opponents piece.
+     *
+     * @return returns true if piece can eat opponents piece.
+     */
 	public abstract boolean eat();
 
 	public abstract boolean canMove();
