@@ -2,9 +2,12 @@ public class Player {
     private String name;
     private int number;
 
+    boolean bot;
+
     public Player(String name, int number) {
         this.name = name;
         this.number = number;
+
     }
 
     /**
