@@ -1,5 +1,8 @@
 public abstract class Print {
-    
+
+    /**
+     * Prints startScreen for player.
+     */
     public static void startScreen() {
         System.out.println("*********************************");
         System.out.println("*    Welcome to play Chess!     *");
