@@ -16,7 +16,7 @@ public class Knight extends ChessPiece {
      * Determines how Knight can move
      * @return boolean-type if Knight can move.
      */
-    public boolean canMove() {
+    public boolean canMove(int row, int col) {
         return true;
     }
 }

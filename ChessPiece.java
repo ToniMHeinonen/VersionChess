@@ -16,7 +16,7 @@ public abstract class ChessPiece {
      */
 	public abstract boolean eat();
 
-	public abstract boolean canMove();
+	public abstract boolean canMove(int row, int col);
 
 	/**
 	 * Get symbol of the chesspiece.
