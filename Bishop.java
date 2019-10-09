@@ -9,6 +9,10 @@ public class Bishop extends ChessPiece {
             setSymbol("b");
     }
 
+    /**
+     * Determines how Bishop can move
+     * @return boolean-type if Bishop moves.
+     */
     public boolean canMove() {
         return true;
     }
