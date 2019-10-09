@@ -1,4 +1,8 @@
 public class Player {
+
+    /**
+     * If a player, holds the name of player.
+     */
     private String name;
     private int number;
 
