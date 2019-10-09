@@ -5,6 +5,7 @@ public class Board {
     public static final int A = 0, B = 1, C = 2, D = 3, E = 4, F = 5,
                             G = 6, H = 7;
     private Player playerTurn;
+    private ChessPiece selectedPiece;
     /*
     moveFromColRow[] contains two values: column and row.
     These values are the chesspiece's position, which
@@ -115,5 +116,7 @@ public class Board {
     public void moveTo() {
         Print.msg("Where do you want to move it? (A7, for example)");
         moveToColRow = Input.getSelectedPosition();
+
+        if ()
     }
 }
