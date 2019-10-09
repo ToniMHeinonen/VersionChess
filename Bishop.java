@@ -16,4 +16,8 @@ public class Bishop extends ChessPiece {
     public boolean canMove() {
         return true;
     }
+
+    public boolean eat() {
+        return true;
+    }
 }
