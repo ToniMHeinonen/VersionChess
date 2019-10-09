@@ -116,7 +116,11 @@ public class Board {
     public void moveTo() {
         Print.msg("Where do you want to move it? (A7, for example)");
         moveToColRow = Input.getSelectedPosition();
+        int row = moveToColRow[0];
+        int col = moveToColRow[1];
 
-        if ()
+        if (selectedPiece.canMove(row, col)) {
+            
+        }
     }
 }
