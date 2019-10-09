@@ -20,6 +20,10 @@ public class King extends ChessPiece {
         return true;
     }
 
+    /**
+     * Determines if King can eat opponents piece.
+     * @return returns true if King can eat.
+     */
     public boolean eat() {
         return true;
     }
