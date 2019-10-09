@@ -12,7 +12,7 @@ public class Queen extends ChessPiece {
             setSymbol("q");
     }
 
-    public boolean canMove(int row, int col) {
+    public boolean canMove(int row, int col, ChessPiece positions) {
         return true;
     }
 }

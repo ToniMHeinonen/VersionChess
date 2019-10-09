@@ -12,7 +12,7 @@ public class Rook extends ChessPiece {
             setSymbol("r");
     }
 
-    public boolean canMove(int row, int col) {
+    public boolean canMove(int row, int col, ChessPiece positions) {
         return true;
     }
 }
