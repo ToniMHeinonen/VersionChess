@@ -101,13 +101,13 @@ public class Board {
             moveFromColRow = Input.getSelectedPosition();
             int row = moveFromColRow[0];
             int col = moveFromColRow[1];
-            ChessPiece position = positions[row][col];
+            selectedPiece = positions[row][col];
 
-            if (position == null) {
+            if (selectedPiece == null) {
                 Print.error("Position is empty");
-            } else if (position.getPlayer() == playerTurn) {
+            } else if (selectedPiece.getPlayer() == playerTurn) {
                 break;
-            } else if (position.getPlayer() != playerTurn) {
+            } else if (selectedPiece.getPlayer() != playerTurn) {
                 Print.error("That is not your chess piece");
             }
         }
