@@ -20,6 +20,14 @@ public class Rook extends ChessPiece {
         if (colAmount != 0 && rowAmount != 0)
         return false;
 
+        if (colAmount > 0 && rowAmount == 0) {
+            for (int i = 1; i <= colAmount; i++) {
+                if (positions[row+i][col] != null) {
+                    return false;
+                }
+            }
+        }
+
         return true;
     }
 }
