@@ -119,8 +119,8 @@ public class Board {
         int row = moveToColRow[0];
         int col = moveToColRow[1];
 
-        if (selectedPiece.canMove(row, col)) {
-            
+        if (selectedPiece.canMove(row, col, positions)) {
+
         }
     }
 }

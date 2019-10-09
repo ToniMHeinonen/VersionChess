@@ -13,7 +13,7 @@ public class Bishop extends ChessPiece {
      * Determines how Bishop can move
      * @return boolean-type if Bishop can move.
      */
-    public boolean canMove(int row, int col) {
+    public boolean canMove(int row, int col, ChessPiece[][] positions) {
         return true;
     }
 
