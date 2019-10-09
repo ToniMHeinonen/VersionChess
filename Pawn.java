@@ -17,6 +17,7 @@ public class Pawn extends ChessPiece {
      * @return boolean-type if Pawn can move.
      */
     public boolean canMove() {
+        if()
         return true;
     }
 }

@@ -9,6 +9,8 @@ public abstract class ChessPiece {
 		this.player = player;
 	}
 
+	public abstract boolean eat();
+
 	public abstract boolean canMove();
 
 	/**
