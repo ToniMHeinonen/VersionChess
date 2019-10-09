@@ -13,8 +13,8 @@ public class Knight extends ChessPiece {
     }
 
     /**
-     * Determines how King can move
-     * @return boolean-type if King moves.
+     * Determines how Knight can move
+     * @return boolean-type if Knight can move.
      */
     public boolean canMove() {
         return true;

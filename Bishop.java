@@ -11,7 +11,7 @@ public class Bishop extends ChessPiece {
 
     /**
      * Determines how Bishop can move
-     * @return boolean-type if Bishop moves.
+     * @return boolean-type if Bishop can move.
      */
     public boolean canMove() {
         return true;
