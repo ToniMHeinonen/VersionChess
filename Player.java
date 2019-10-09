@@ -2,6 +2,9 @@ public class Player {
     private String name;
     private int number;
 
+    /**
+     * Used to determine if player is a bot
+     */
     boolean bot;
 
     public Player(String name, int number) {
