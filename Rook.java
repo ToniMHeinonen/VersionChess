@@ -15,6 +15,11 @@ public class Rook extends ChessPiece {
     public boolean canMove(int row, int col, ChessPiece[][] positions) {
         int colAmount = col - getCol();
         int rowAmount = row - getRow();
+
+        // Rook can only move columns or rows, not both
+        if (colAmount != 0 && rowAmount != 0)
+        return false;
+
         return true;
     }
 }
