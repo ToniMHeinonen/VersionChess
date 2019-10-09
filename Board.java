@@ -119,8 +119,12 @@ public class Board {
         int row = moveToColRow[0];
         int col = moveToColRow[1];
 
-        if (selectedPiece.canMove(row, col, positions)) {
+        ChessPiece position = positions[row][col];
 
+        /* If selected position is null or occupied by the opponent, check
+           if the piece can move to the spot or not */
+        if (position == null || position.getPlayer() != playerTurn) {
+            selectedPiece.canMove(row,col,positions);
         }
     }
 }
