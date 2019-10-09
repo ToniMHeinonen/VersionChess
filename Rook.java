@@ -20,6 +20,9 @@ public class Rook extends ChessPiece {
         if (colAmount != 0 && rowAmount != 0)
         return false;
 
+        // If rook is moving through columns, check that there are no
+        // pieces in the way. (missing the condition, when there is other
+        // player's piece to be eaten)
         if (colAmount > 0 && rowAmount == 0) {
             for (int i = 1; i <= colAmount; i++) {
                 if (positions[row+i][col] != null) {
