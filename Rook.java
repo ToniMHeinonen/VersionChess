@@ -48,6 +48,12 @@ public class Rook extends ChessPiece {
                         return false;
                     }
                 }
+            } else {
+                for (int i = -1; i >= rowAmount; i--) {
+                    if (positions[getRow()+i][col] != null) {
+                        return false;
+                    }
+                }
             }
         }
         
