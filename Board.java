@@ -115,16 +115,19 @@ public class Board {
 
     public void moveTo() {
         Print.msg("Where do you want to move it? (A7, for example)");
-        moveToColRow = Input.getSelectedPosition();
-        int row = moveToColRow[0];
-        int col = moveToColRow[1];
+        
+        while (true) {
+            moveToColRow = Input.getSelectedPosition();
+            int row = moveToColRow[0];
+            int col = moveToColRow[1];
 
-        ChessPiece position = positions[row][col];
+            ChessPiece position = positions[row][col];
 
-        /* If selected position is null or occupied by the opponent, check
-           if the piece can move to the spot or not */
-        if (position == null || position.getPlayer() != playerTurn) {
-            selectedPiece.canMove(row,col,positions);
+            /* If selected position is null or occupied by the opponent, check
+            if the piece can move to the spot or not */
+            if (position == null || position.getPlayer() != playerTurn) {
+                selectedPiece.canMove(row,col,positions);
+            }
         }
     }
 }
