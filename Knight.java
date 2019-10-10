@@ -17,6 +17,13 @@ public class Knight extends ChessPiece {
      * @return boolean-type if Knight can move.
      */
     public boolean canMove(int row, int col, ChessPiece[][] positions) {
+        int colAmount = Math.abs(col - getCol());
+        int rowAmount = Math.abs(row - getRow());
+
+        if ((colAmount == 1 && rowAmount == 2) ||
+            (colAmount == 2 && rowAmount == 1))
+            return true;
+        
         return true;
     }
 }
