@@ -41,13 +41,16 @@ public class Rook extends ChessPiece {
             }
         }
 
+        // Rook is through rows.
         if (colAmount == 0 && rowAmount != 0) {
+            // Rook is moving up
             if (rowAmount > 0) {
                 for (int i = 1; i <= rowAmount; i++) {
                     if (position[getRow()+i][col] != null) {
                         return false;
                     }
                 }
+            // Rook is moving down
             } else {
                 for (int i = -1; i >= rowAmount; i--) {
                     if (positions[getRow()+i][col] != null) {
