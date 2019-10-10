@@ -105,7 +105,10 @@ public class Pawn extends ChessPiece {
         return false;
     }
 
-
+    /**
+     * Determines if King can eat opponents piece.
+     * @return returns true if King can eat.
+     */
     public boolean eat() {
         return true;
     }
