@@ -55,6 +55,15 @@ public class Pawn extends ChessPiece {
                         return true;
                 }
             }
+            // Else pawn tries to eat diagonally
+            else {
+                // If pawn is moving 1 row
+                if (rowAmount == 1) {
+                    // If it's not null, it's occupied by the opponent
+                    if (positions[row][col] != null)
+                        return true;
+                }
+            }
             
         } else {
             // Player 2 can't move up
