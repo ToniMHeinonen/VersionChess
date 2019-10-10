@@ -23,7 +23,9 @@ public class Knight extends ChessPiece {
         if ((colAmount == 1 && rowAmount == 2) ||
             (colAmount == 2 && rowAmount == 1))
             return true;
-        
+    }
+
+    public boolean eat() {
         return true;
     }
 }
