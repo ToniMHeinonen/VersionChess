@@ -106,4 +106,7 @@ public class Pawn extends ChessPiece {
     }
 
 
+    public boolean eat() {
+        return true;
+    }
 }
