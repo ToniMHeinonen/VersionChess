@@ -43,4 +43,8 @@ public class Rook extends ChessPiece {
         
         return true;
     }
+
+    public boolean eat() {
+        return true;
+    }
 }
