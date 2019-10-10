@@ -40,6 +40,10 @@ public class Rook extends ChessPiece {
                 }
             }
         }
+
+        if (colAmount == 0 && rowAmount != 0) {
+
+        }
         
         return true;
     }
