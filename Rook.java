@@ -42,7 +42,13 @@ public class Rook extends ChessPiece {
         }
 
         if (colAmount == 0 && rowAmount != 0) {
-
+            if (rowAmount > 0) {
+                for (int i = 1; i <= rowAmount; i++) {
+                    if (position[getRow()+i][col] != null) {
+                        return false;
+                    }
+                }
+            }
         }
         
         return true;
