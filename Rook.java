@@ -27,14 +27,14 @@ public class Rook extends ChessPiece {
             // Rook is moving to right
             if (colAmount > 0) {
                 for (int i = 1; i <= colAmount; i++) {
-                    if (positions[row][col+i] != null) {
+                    if (positions[row][getCol()+i] != null) {
                         return false;
                     }
                 }
             // Rook is moving to left
             } else {
                 for (int i = -1; i >= colAmount; i--) {
-                    if (positions[row][col+i] != null) {
+                    if (positions[row][getCol()+i] != null) {
                         return false;
                     }
                 }
