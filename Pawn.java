@@ -70,7 +70,37 @@ public class Pawn extends ChessPiece {
             if (rowAmount > 0)
                 return false;
 
-            
+            // If player only moved forwards, check only rows
+            if (colAmount == 0) {
+                // Pawn can't eat pieces in front
+                if (positions[row][col] != null) {
+                    return false;
+                }
+                // If only one row was moved up
+                if (rowAmount == -1) {
+                    return true;
+                }
+                // If two rows were moved
+                else if (rowAmount == -2) {
+                    // Pawn can only move 2 in row 1
+                    if (getRow() != 6)
+                        return false;
+                    
+                    /* If next position is null, return true, since
+                       target position was already checked */
+                    if (positions[row-1][col] == null)
+                        return true;
+                }
+            }
+            // Else pawn tries to eat diagonally
+            else {
+                // If pawn is moving 1 row
+                if (rowAmount == -1) {
+                    // If it's not null, it's occupied by the opponent
+                    if (positions[row][col] != null)
+                        return true;
+                }
+            }
         }
         return false;
     }
