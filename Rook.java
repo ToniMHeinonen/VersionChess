@@ -41,7 +41,7 @@ public class Rook extends ChessPiece {
             }
         }
 
-        // Rook is through rows.
+        // Rook is moving through rows.
         if (colAmount == 0 && rowAmount != 0) {
             // Rook is moving up
             if (rowAmount > 0) {
