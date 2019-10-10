@@ -15,4 +15,8 @@ public class Queen extends ChessPiece {
     public boolean canMove(int row, int col, ChessPiece[][] positions) {
         return true;
     }
+
+    public boolean eat() {
+        return true;
+    }
 }
