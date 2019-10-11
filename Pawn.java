@@ -35,6 +35,11 @@ public class Pawn extends ChessPiece {
         else if (getPlayer().getNumber() == 2 && rowAmount > 0)
             return false;
         
+        // Change negative values to positive so we can check player 1
+        // and player 2 movement using same code
+        rowAmount = Math.abs(rowAmount);
+        colAmount = Math.abs(colAmount);
+
         if (getPlayer().getNumber() == 1) {
             // Player 1 can't move down
             if (rowAmount < 0)
