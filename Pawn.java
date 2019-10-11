@@ -53,19 +53,19 @@ public class Pawn extends ChessPiece {
             }
             // If two rows were moved
             else if (rowAmount == 2) {
-                int secondRow;
+                int startingRow;
                 int val;
 
                 if (playerOne) {
-                    secondRow = 1;
+                    startingRow = 1;
                     val = 1;
                 } else {
-                    secondRow = 6;
+                    startingRow = 6;
                     val = -1;
                 }
                 
-                // Pawn can only move 2 in row 1
-                if (getRow() != secondRow)
+                // Pawn can only move 2 in his starting row
+                if (getRow() != startingRow)
                     return false;
                 
                 /* If next position is null, return true, since
