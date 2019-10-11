@@ -32,11 +32,15 @@ public class Rook extends ChessPiece {
                 return true;
             }
 
+            // If Rook is moving more than one spot to right,
+            // check that all spots are empty between starting-point
+            // and end-point.
             if (colAmount > 1) {
                 for (int i = 2; i <= colAmount; i++) {
                     if (positions[row][getCol()+i-1] != null) {
                         return false;
                     }
+                    // Check that the final spot is empty or occupied by another player.
                     if (i == colAmount && (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
                         return true;
                     }
