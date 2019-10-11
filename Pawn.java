@@ -27,6 +27,10 @@ public class Pawn extends ChessPiece {
         // Pawn has to move in rows and can never move more than 2
         if (rowAmount == 0 || rowAmount > 2 || rowAmount < -2)
             return false;
+
+        // If player is 1 and it's trying to move down, return false
+        if (getPlayer().getNumber() == 1 && rowAmount < 0)
+            return false;
         
         if (getPlayer().getNumber() == 1) {
             // Player 1 can't move down
