@@ -25,15 +25,20 @@ public class Rook extends ChessPiece {
         // player's piece to be eaten)
         if (colAmount != 0 && rowAmount == 0) {
             // Rook is moving to right
+
             // If Rook is moving only one spot to right, 
             // check that the spot is empty or occupied by another player.
             if (colAmount == 1 && (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
                 return true;
             }
-            if (colAmount > 0) {
-                for (int i = 1; i <= colAmount; i++) {
-                    if (positions[row][getCol()+i] != null) {
+
+            if (colAmount > 1) {
+                for (int i = 2; i <= colAmount; i++) {
+                    if (positions[row][getCol()+i-1] != null) {
                         return false;
+                    }
+                    if (i == colAmount && (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
+                        return true;
                     }
                 }
             // Rook is moving to left
