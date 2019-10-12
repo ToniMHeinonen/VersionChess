@@ -14,8 +14,7 @@ public abstract class ChessPiece {
      *
      * @return returns true if piece can eat opponents piece.
      */
-	public abstract boolean eatPiece() {
-	}
+	public abstract boolean eatPiece(int row, int col, ChessPiece[][] positions);
 
 	public abstract boolean canMove(int row, int col, ChessPiece[][] positions);
 
