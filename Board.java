@@ -69,7 +69,6 @@ public class Board {
     }
 
     public void play() {
-        Print.board(positions);
         if (state == MOVE_FROM)
             moveFrom();
         else if (state == MOVE_TO)
@@ -97,6 +96,7 @@ public class Board {
      * Get position of the chesspiece that players wants to move.
      */
     public void moveFrom() {
+        Print.board(positions);
         Print.msg(playerTurn.getName() + 
             ", which chesspiece do you want to move? (A7, for example)");
         
