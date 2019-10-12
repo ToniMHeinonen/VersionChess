@@ -70,7 +70,10 @@ public class Board {
 
     public void play() {
         Print.board(positions);
-        moveFrom();
+        if (state == MOVE_FROM)
+            moveFrom();
+        else if (state == MOVE_TO)
+            moveTo();
     }
 
     public Player getPlayerTurn() {
