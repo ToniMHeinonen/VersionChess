@@ -126,7 +126,10 @@ public class Board {
             /* If selected position is null or occupied by the opponent, check
             if the piece can move to the spot or not */
             if (position == null || position.getPlayer() != playerTurn) {
-                selectedPiece.canMove(row,col,positions);
+                if (selectedPiece.canMove(row,col,positions)); {
+                    // Move piece there and if there and eat opponent's
+                    // piece if present, implement code here
+                }
             }
         }
     }
