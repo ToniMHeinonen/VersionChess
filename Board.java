@@ -128,6 +128,13 @@ public class Board {
 
             ChessPiece position = positions[row][col];
 
+            /* If player chose same spot twice, return back to selecting
+            which piece to move */
+            if (moveFromColRow.equals(moveToColRow)) {
+                state = MOVE_FROM;
+                break;
+            }
+
             /* If selected position is null or occupied by the opponent, check
             if the piece can move to the spot or not */
             if (position == null || position.getPlayer() != playerTurn) {
@@ -141,6 +148,8 @@ public class Board {
                 Print.error("Position already occupied");
             }
         }
+
+        play();
     }
 
     /**
