@@ -128,6 +128,8 @@ public class Board {
                     // Move piece there and if there and eat opponent's
                     // piece if present, implement code here
                 }
+            } else {
+                Print.error("Position already occupied");
             }
         }
     }
