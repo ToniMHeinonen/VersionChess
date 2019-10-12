@@ -61,6 +61,10 @@ public class Rook extends ChessPiece {
 
         // Rook is moving through rows.
         if (colAmount == 0 && rowAmount != 0) {
+            if ((rowAmount == 1 || rowAmount == -1) && 
+            (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
+                return true;
+            }
             // Rook is moving up
             if (rowAmount > 0) {
                 for (int i = 1; i <= rowAmount; i++) {
