@@ -131,7 +131,7 @@ public class Board {
         }
     }
 
-    public void removePiece() {
+    public void eatPiece() {
         boolean opponent;
         int row = moveToColRow[0];
         int col = moveToColRow[1];
