@@ -114,6 +114,9 @@ public class Board {
                 Print.error("That is not your chess piece");
             }
         }
+
+        state = MOVE_TO;
+        play();
     }
 
     public void moveTo() {
