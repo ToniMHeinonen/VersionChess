@@ -82,13 +82,15 @@ public class Rook extends ChessPiece {
                         return true;
                     }
                 }
-            // Rook is moving down
             } else {
-                for (int i = -1; i >= rowAmount; i--) {
-                    if (positions[getRow()+i][col] != null) {
+                for (int i = -2; i >= rowAmount; i--) {
+                    if (positions[getRow()+i+1][col] != null) {
                         return false;
                     }
-                }
+                    if (i == rowAmount && (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
+                        return true;
+                    }
+            }
             }
         }
         
