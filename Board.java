@@ -2,8 +2,6 @@ public class Board {
 
     private ChessPiece[][] positions = new ChessPiece[8][8];
     private Player[] players = new Player[2];
-    public static final int A = 0, B = 1, C = 2, D = 3, E = 4, F = 5,
-                            G = 6, H = 7;
     private Player playerTurn;
     private ChessPiece selectedPiece;
     /*
