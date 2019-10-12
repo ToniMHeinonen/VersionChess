@@ -131,6 +131,9 @@ public class Board {
         }
     }
 
+    /**
+     * Removes symbol of opponents piece from the board.
+     */
     public void eatPiece() {
         int row = moveToColRow[0];
         int col = moveToColRow[1];
