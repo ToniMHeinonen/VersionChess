@@ -132,12 +132,12 @@ public class Board {
     }
 
     public void eatPiece() {
-        boolean opponent;
         int row = moveToColRow[0];
         int col = moveToColRow[1];
 
         ChessPiece position = positions[row][col];
 
-        if (position == false)
+        if (position == !null; && selectedPiece.getPlayer() !=playerTurn ) {
+        }
     }
 }
