@@ -68,7 +68,7 @@ public class Rook extends ChessPiece {
             (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
                 return true;
             }
-            
+
             // If Rook is moving more than one spot to up,
             // check that all spots are empty between starting-point
             // and end-point.
@@ -77,6 +77,7 @@ public class Rook extends ChessPiece {
                     if (positions[getRow()+i-1][col] != null) {
                         return false;
                     }
+                    // Check that the final spot is empty or occupied by another player.
                     if (i == rowAmount && (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
                         return true;
                     }
