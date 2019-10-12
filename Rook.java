@@ -61,6 +61,8 @@ public class Rook extends ChessPiece {
 
         // Rook is moving through rows.
         if (colAmount == 0 && rowAmount != 0) {
+            // If Rook is moving only one spot to up or down, 
+            // check that the spot is empty or occupied by another player.
             if ((rowAmount == 1 || rowAmount == -1) && 
             (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
                 return true;
