@@ -109,14 +109,13 @@ public class Board {
             if (selectedPiece == null) {
                 Print.error("Position is empty");
             } else if (selectedPiece.getPlayer() == playerTurn) {
+                state = MOVE_TO;
+                play();
                 break;
             } else if (selectedPiece.getPlayer() != playerTurn) {
                 Print.error("That is not your chess piece");
             }
         }
-
-        state = MOVE_TO;
-        play();
     }
 
     public void moveTo() {
