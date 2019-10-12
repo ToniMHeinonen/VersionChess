@@ -131,7 +131,10 @@ public class Board {
         }
     }
 
-    public void eat() {
+    public void removePiece() {
+        boolean player;
+        boolean opponent;
 
+        if (position == false)
     }
 }
