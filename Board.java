@@ -73,6 +73,8 @@ public class Board {
             moveFrom();
         else if (state == MOVE_TO)
             moveTo();
+        else if (state == MOVING)
+            movePiece();
     }
 
     public Player getPlayerTurn() {
@@ -140,7 +142,7 @@ public class Board {
             if the piece can move to the spot or not */
             if (position == null || position.getPlayer() != playerTurn) {
                 if (selectedPiece.canMove(row,col,positions)) {
-                    movePiece();
+                    state = MOVING;
                     break;
                 } else {
                     Print.error("Piece can't move there");
