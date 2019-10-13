@@ -140,8 +140,8 @@ public class Board {
             if the piece can move to the spot or not */
             if (position == null || position.getPlayer() != playerTurn) {
                 if (selectedPiece.canMove(row,col,positions)) {
-                    // Move piece there and if there and eat opponent's
-                    // piece if present, implement code here
+                    movePiece();
+                    break;
                 } else {
                     Print.error("Piece can't move there");
                 }
