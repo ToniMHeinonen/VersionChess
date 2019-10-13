@@ -153,6 +153,10 @@ public class Board {
         play();
     }
 
+    public void movePiece() {
+        
+    }
+
     /**
      * Removes symbol of opponents piece from the board.
      */
