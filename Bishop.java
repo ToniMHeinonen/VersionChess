@@ -22,6 +22,7 @@ public class Bishop extends ChessPiece {
             return false;
         }
 
+        // If Bishop is moving up and right, check that all spots are free between start and end point.
         if (colAmount > 1 && rowAmount > 1) {
             for (int i = 2; i < colAmount; i++) {
                 if (positions[getRow()+i-1][getCol()+i-1] != null) {
