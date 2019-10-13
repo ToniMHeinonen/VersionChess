@@ -154,7 +154,8 @@ public class Board {
     }
 
     public void movePiece() {
-        
+        positions[moveFromColRow[0]][moveFromColRow[1]] = null;
+        positions[moveToColRow[0]][moveToColRow[1]] = selectedPiece;
     }
 
     /**
