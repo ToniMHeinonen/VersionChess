@@ -159,8 +159,13 @@ public class Board {
      * "eaten".
      */
     public void movePiece() {
-        positions[moveFromColRow[0]][moveFromColRow[1]] = null;
-        positions[moveToColRow[0]][moveToColRow[1]] = selectedPiece;
+        int fromRow = moveFromColRow[0];
+        int fromCol = moveFromColRow[1];
+        int toRow = moveToColRow[0];
+        int toCol = moveToColRow[1];
+
+        positions[fromRow][fromCol] = null;
+        positions[toRow][toCol] = selectedPiece;
     }
 
     /**
