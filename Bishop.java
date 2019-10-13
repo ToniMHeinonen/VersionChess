@@ -17,6 +17,7 @@ public class Bishop extends ChessPiece {
         int colAmount = col - getCol();
         int rowAmount = row - getRow();
 
+        // Bishop must move always the same amount of rows and columns.
         if (Math.abs(colAmount) != Math.abs(rowAmount)) {
             return false;
         }
