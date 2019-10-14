@@ -23,7 +23,7 @@ public class Player {
     }
 
     public void addPiece(ChessPiece piece) {
-        
+        pieces.add(piece);
     }
 
     /**
