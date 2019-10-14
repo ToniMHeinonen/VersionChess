@@ -69,12 +69,14 @@ public class Board {
     }
 
     public void play() {
-        if (state == MOVE_FROM)
-            moveFrom();
-        else if (state == MOVE_TO)
-            moveTo();
-        else if (state == MOVING)
-            movePiece();
+        while (true) {
+            if (state == MOVE_FROM)
+                moveFrom();
+            else if (state == MOVE_TO)
+                moveTo();
+            else if (state == MOVING)
+                movePiece();
+        }
     }
 
     public Player getPlayerTurn() {
