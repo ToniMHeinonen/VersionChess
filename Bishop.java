@@ -24,8 +24,8 @@ public class Bishop extends ChessPiece {
 
         // If Bishop is moving up and right, check that all spots are free between start and end point.
         if (colAmount > 1 && rowAmount > 1) {
-            for (int i = 2; i < colAmount; i++) {
-                if (positions[getRow()+i-1][getCol()+i-1] != null) {
+            for (int i = 1; i < colAmount; i++) {
+                if (positions[getRow()+i][getCol()+i] != null) {
                     return false;
                 }
             }
@@ -33,8 +33,8 @@ public class Bishop extends ChessPiece {
 
         // If Bishop is moving down and left, check that all spots are free between start and end point.
         if (colAmount < -1 && rowAmount < -1) {
-            for (int i = -2; i > colAmount; i--) {
-                if (positions[getRow()+i+1][getCol()+i+1] != null) {
+            for (int i = -1; i > colAmount; i--) {
+                if (positions[getRow()+i][getCol()+i] != null) {
                     return false;
                 }
             }
