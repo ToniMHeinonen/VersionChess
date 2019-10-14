@@ -50,4 +50,12 @@ public class Player {
 	public void setNumber(int number) {
 		this.number = number;
 	}
+
+    public ChessPiece getKing() {
+        return king;
+    }
+
+    public void setKing(ChessPiece king) {
+        this.king = king;
+    }
 }
