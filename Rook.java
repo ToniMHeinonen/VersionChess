@@ -21,16 +21,8 @@ public class Rook extends ChessPiece {
         return false;
 
         // If rook is moving through columns, check that there are no
-        // pieces in the way. (missing the condition, when there is other
-        // player's piece to be eaten)
+        // pieces in the way.
         if (colAmount != 0 && rowAmount == 0) {
-
-            // If Rook is moving only one spot to right or left, 
-            // check that the spot is empty or occupied by another player.
-            if ((colAmount == 1 || colAmount == -1) && 
-            (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
-                return true;
-            }
 
             // If Rook is moving more than one spot to right,
             // check that all spots are empty between starting-point
