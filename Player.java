@@ -22,6 +22,10 @@ public class Player {
 
     }
 
+    public void addPiece(ChessPiece piece) {
+        
+    }
+
     /**
      * Get player's name.
      * @return player's name
