@@ -119,8 +119,6 @@ public class Board {
                 Print.error("That is not your chess piece");
             }
         }
-
-        play();
     }
 
     public void moveTo() {
@@ -153,8 +151,6 @@ public class Board {
                 Print.error("Position already occupied");
             }
         }
-
-        play();
     }
 
     /**
