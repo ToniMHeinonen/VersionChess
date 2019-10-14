@@ -57,6 +57,13 @@ public class Board {
             for (int i = 0; i < 8; i++) {
                 positions[pawnRow][i] = new Pawn(pawnRow, i, p);
             }
+
+            // Add pieces to the player
+            for (int i = 0; i < positions[row].length; i++) {
+                p.addPiece(positions[row][i]);
+                p.addPiece(positions[pawnRow][i]);
+            }
+            p.setKing(positions[row][4]);
         }   
     }
 
