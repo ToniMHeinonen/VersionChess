@@ -46,35 +46,20 @@ public class Rook extends ChessPiece {
         // Rook is moving through rows.
         if (colAmount == 0 && rowAmount != 0) {
 
-            // If Rook is moving only one spot to up or down, 
-            // check that the spot is empty or occupied by another player.
-            if ((rowAmount == 1 || rowAmount == -1) && 
-            (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
-                return true;
-            }
-
             // If Rook is moving more than one spot to up,
             // check that all spots are empty between starting-point
             // and end-point.
             if (rowAmount > 1) {
-                for (int i = 2; i <= rowAmount; i++) {
-                    if (positions[getRow()+i-1][col] != null) {
+                for (int i = 1; i < rowAmount; i++) {
+                    if (positions[getRow()+i][col] != null) {
                         return false;
-                    }
-                    // Check that the final spot is empty or occupied by another player.
-                    if (i == rowAmount && (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
-                        return true;
                     }
                 }
             // Rook is moving to down more than one spot.
             } else {
-                for (int i = -2; i >= rowAmount; i--) {
-                    if (positions[getRow()+i+1][col] != null) {
+                for (int i = -1; i > rowAmount; i--) {
+                    if (positions[getRow()+i][col] != null) {
                         return false;
-                    }
-                    // Check that the final spot is empty or occupied by another player.
-                    if (i == rowAmount && (positions[row][col] == null || positions[row][col].getPlayer() != getPlayer())) {
-                        return true;
                     }
                 }
             }
