@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Board {
 
     private ChessPiece[][] positions = new ChessPiece[8][8];
