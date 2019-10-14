@@ -10,6 +10,7 @@ public class Player {
     private int number;
 
     private ArrayList<ChessPiece> pieces = new ArrayList<>();
+    private ChessPiece king;
 
     /**
      * Used to determine if player is a bot
