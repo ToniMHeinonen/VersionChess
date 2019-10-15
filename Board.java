@@ -174,7 +174,8 @@ public class Board {
             int row = opponentKing.getRow();
             int col = opponentKing.getCol();
             if (c.canMove(row, col, positions)) {
-
+                checkIsOn = true;
+                break;
             }
         }
     }
