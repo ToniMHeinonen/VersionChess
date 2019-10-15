@@ -166,6 +166,8 @@ public class Board {
             opponent = players[1];
         else
             opponent = players[0];
+
+        ChessPiece opponentKing = opponent.getKing();
     }
 
     /**
