@@ -58,4 +58,8 @@ public class Player {
     public void setKing(ChessPiece king) {
         this.king = king;
     }
+
+    public ArrayList<ChessPiece> getPieces() {
+        return pieces;
+    } 
 }

@@ -4,6 +4,7 @@ public class Board {
     private Player[] players = new Player[2];
     private Player playerTurn;
     private ChessPiece selectedPiece;
+    private boolean checkIsOn;
     private int state;
     private final int MOVE_FROM = 0, MOVE_TO = 1, MOVING = 2, NEXT_TURN = 3;
     /*
@@ -96,7 +97,7 @@ public class Board {
      * If it's currently player one's turn, change to player two
      * and vice versa.
      */
-    public void nextTurn() {
+    private void nextTurn() {
         if (playerTurn == players[0])
             playerTurn = players[1];
         else
@@ -106,7 +107,7 @@ public class Board {
     /**
      * Get position of the chesspiece that players wants to move.
      */
-    public void moveFrom() {
+    private void moveFrom() {
         Print.board(positions);
         Print.msg(playerTurn.getName() + 
             ", which chesspiece do you want to move? (A7, for example)");
@@ -128,7 +129,7 @@ public class Board {
         }
     }
 
-    public void moveTo() {
+    private void moveTo() {
         Print.msg("Where do you want to move it? (A7, for example)");
         
         while (true) {
@@ -160,12 +161,31 @@ public class Board {
         }
     }
 
+    private void lookForCheck() {
+        Player opponent;
+        if (players[0].equals(playerTurn))
+            opponent = players[1];
+        else
+            opponent = players[0];
+
+        ChessPiece opponentKing = opponent.getKing();
+
+        for (ChessPiece c : playerTurn.getPieces()) {
+            int row = opponentKing.getRow();
+            int col = opponentKing.getCol();
+            if (c.canMove(row, col, positions)) {
+                checkIsOn = true;
+                break;
+            }
+        }
+    }
+
     /**
      * Move selected piece to new position, if piece lands on a 
      * space occupied by opponent's piece, the piece is automatically
      * "eaten".
      */
-    public void movePiece() {
+    private void movePiece() {
         int fromRow = moveFromColRow[0];
         int fromCol = moveFromColRow[1];
         int toRow = moveToColRow[0];
