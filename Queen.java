@@ -15,6 +15,12 @@ public class Queen extends ChessPiece {
     public boolean canMove(int row, int col, ChessPiece[][] positions) {
         int colAmount = col - getCol();
         int rowAmount = row - getRow();
+
+        if (rowAmount != 0 && colAmount != 0) {
+            if (Math.abs(rowAmount) != Math.abs(colAmount)) {
+                return false;
+            }
+        }
         return true;
     }
 
