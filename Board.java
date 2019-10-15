@@ -96,7 +96,7 @@ public class Board {
      * If it's currently player one's turn, change to player two
      * and vice versa.
      */
-    public void nextTurn() {
+    private void nextTurn() {
         if (playerTurn == players[0])
             playerTurn = players[1];
         else
@@ -106,7 +106,7 @@ public class Board {
     /**
      * Get position of the chesspiece that players wants to move.
      */
-    public void moveFrom() {
+    private void moveFrom() {
         Print.board(positions);
         Print.msg(playerTurn.getName() + 
             ", which chesspiece do you want to move? (A7, for example)");
@@ -128,7 +128,7 @@ public class Board {
         }
     }
 
-    public void moveTo() {
+    private void moveTo() {
         Print.msg("Where do you want to move it? (A7, for example)");
         
         while (true) {
@@ -165,7 +165,7 @@ public class Board {
      * space occupied by opponent's piece, the piece is automatically
      * "eaten".
      */
-    public void movePiece() {
+    private void movePiece() {
         int fromRow = moveFromColRow[0];
         int fromCol = moveFromColRow[1];
         int toRow = moveToColRow[0];
