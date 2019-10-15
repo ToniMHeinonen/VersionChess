@@ -37,7 +37,7 @@ public class Queen extends ChessPiece {
 
             // Queen is moving left.
             if (colAmount < -1) {
-                for (int i = -1; i > colAmount; i++) {
+                for (int i = -1; i > colAmount; i--) {
                     if (positions[row][getCol()+i] != null) {
                         return false;
                     }
