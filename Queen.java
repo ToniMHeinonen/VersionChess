@@ -13,6 +13,8 @@ public class Queen extends ChessPiece {
     }
 
     public boolean canMove(int row, int col, ChessPiece[][] positions) {
+        int colAmount = col - getCol();
+        int rowAmount = row - getRow();
         return true;
     }
 
