@@ -168,6 +168,14 @@ public class Board {
             opponent = players[0];
 
         ChessPiece opponentKing = opponent.getKing();
+
+        for (ChessPiece c : playerTurn.getPieces()) {
+            int row = opponentKing.getRow();
+            int col = opponentKing.getCol();
+            if (c.canMove(row, col, positions)) {
+
+            }
+        }
     }
 
     /**
