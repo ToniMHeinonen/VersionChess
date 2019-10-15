@@ -161,7 +161,11 @@ public class Board {
     }
 
     private void lookForCheck() {
-        
+        Player opponent;
+        if (players[0].equals(playerTurn))
+            opponent = players[1];
+        else
+            opponent = players[0];
     }
 
     /**
