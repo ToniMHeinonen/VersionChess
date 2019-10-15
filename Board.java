@@ -160,6 +160,10 @@ public class Board {
         }
     }
 
+    private void lookForCheck() {
+        
+    }
+
     /**
      * Move selected piece to new position, if piece lands on a 
      * space occupied by opponent's piece, the piece is automatically
