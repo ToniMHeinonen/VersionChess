@@ -80,9 +80,9 @@ public class Board {
         while (true) {
             if (state == MOVE_FROM)
                 moveFrom();
-            else if (state == MOVE_TO)
+            if (state == MOVE_TO)
                 moveTo();
-            else if (state == MOVING)
+            if (state == MOVING)
                 movePiece();
         }
     }
