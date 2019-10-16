@@ -84,6 +84,8 @@ public class Board {
                 moveTo();
             if (state == MOVING)
                 movePiece();
+            if (state == CHECK)
+                lookForCheck();
         }
     }
 
