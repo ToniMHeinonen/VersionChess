@@ -163,6 +163,24 @@ public class Board {
         }
     }
 
+    /**
+     * Move selected piece to new position, if piece lands on a 
+     * space occupied by opponent's piece, the piece is automatically
+     * "eaten".
+     */
+    private void movePiece() {
+        int fromRow = moveFromColRow[0];
+        int fromCol = moveFromColRow[1];
+        int toRow = moveToColRow[0];
+        int toCol = moveToColRow[1];
+
+        positions[fromRow][fromCol] = null;
+        positions[toRow][toCol] = selectedPiece;
+
+        selectedPiece.setRow(toRow);
+        selectedPiece.setCol(toCol);
+    }
+
     private void lookForCheck() {
         Player opponent;
         if (players[0].equals(playerTurn))
@@ -180,24 +198,6 @@ public class Board {
                 break;
             }
         }
-    }
-
-    /**
-     * Move selected piece to new position, if piece lands on a 
-     * space occupied by opponent's piece, the piece is automatically
-     * "eaten".
-     */
-    private void movePiece() {
-        int fromRow = moveFromColRow[0];
-        int fromCol = moveFromColRow[1];
-        int toRow = moveToColRow[0];
-        int toCol = moveToColRow[1];
-
-        positions[fromRow][fromCol] = null;
-        positions[toRow][toCol] = selectedPiece;
-
-        selectedPiece.setRow(toRow);
-        selectedPiece.setCol(toCol);
     }
 
     /**
