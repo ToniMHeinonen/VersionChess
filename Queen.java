@@ -45,7 +45,10 @@ public class Queen extends ChessPiece {
             }
         }
 
+        // Queen is moving up or down.
         if (rowAmount != 0 && colAmount == 0) {
+
+            // Queen is moving up.
             if (rowAmount > 1) {
                 for (int i = 1; i < rowAmount; i++) {
                     if (positions[getRow()+i][col] != null) {
