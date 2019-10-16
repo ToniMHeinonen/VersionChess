@@ -6,7 +6,7 @@ public class Board {
     private ChessPiece selectedPiece;
     private boolean checkIsOn;
     private int state;
-    private final int MOVE_FROM = 0, MOVE_TO = 1, MOVING = 2, NEXT_TURN = 3;
+    private final int MOVE_FROM = 0, MOVE_TO = 1, MOVING = 2, CHECK = 3, NEXT_TURN = 4;
     /*
     moveFromColRow[] contains two values: column and row.
     These values are the chesspiece's position, which
