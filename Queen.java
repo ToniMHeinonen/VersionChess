@@ -66,6 +66,14 @@ public class Queen extends ChessPiece {
                 }
             }
         }
+
+        if (colAmount > 1 && rowAmount > 1) {
+            for (int i = 1; i < colAmount; i++) {
+                if (positions[getRow()+i][getCol()+i] != null) {
+                    return false;
+                }
+            }
+        }
         return true;
     }
 
