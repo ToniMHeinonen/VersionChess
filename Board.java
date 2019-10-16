@@ -179,6 +179,8 @@ public class Board {
 
         selectedPiece.setRow(toRow);
         selectedPiece.setCol(toCol);
+
+        state = CHECK;
     }
 
     private void lookForCheck() {
