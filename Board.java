@@ -106,6 +106,8 @@ public class Board {
             playerTurn = players[1];
         else
             playerTurn = players[0];
+
+        state = MOVE_FROM;
     }
 
     /**
