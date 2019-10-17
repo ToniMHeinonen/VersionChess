@@ -94,13 +94,15 @@ public class Queen extends ChessPiece {
             }
         }
 
+        // Queen is moving up and left.
         if (colAmount < -1 && rowAmount > 1) {
             for (int i = -1; i > colAmount; i--) {
-                if (positions[getRow()+Math.abs(i)][getCol()+1] != null) {
+                if (positions[getRow()+Math.abs(i)][getCol()+i] != null) {
                     return false;
                 }
             }
         }
+
         return true;
     }
 
