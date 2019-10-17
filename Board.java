@@ -200,6 +200,8 @@ public class Board {
                 break;
             }
         }
+
+        state = NEXT_TURN;
     }
 
     /**
