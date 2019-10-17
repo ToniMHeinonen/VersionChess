@@ -138,6 +138,9 @@ public class Board {
         }
     }
 
+    /**
+     * Move chess piece to the desired position if able.
+     */
     private void moveTo() {
         Print.msg("Where do you want to move it? (A7, for example)");
         
