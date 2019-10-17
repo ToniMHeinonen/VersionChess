@@ -68,6 +68,9 @@ public class Board {
         }   
     }
 
+    /**
+     * Get names for players and initialize them to the players array.
+     */
     private void initializePlayers() {
         Print.msg("Give name to player 1:");
         players[0] = new Player(Input.getString(), 1);
