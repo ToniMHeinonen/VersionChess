@@ -183,20 +183,21 @@ public class Board {
         int fromCol = moveFromColRow[1];
         int toRow = moveToColRow[0];
         int toCol = moveToColRow[1];
+        // Create copy of positions so we can reset the positions if move is illegal.
         ChessPiece[][] copy = new ChessPiece[positions.length][positions.length];
         System.arraycopy(positions, 0, copy, 0, copy.length);
 
+        // Move piece to the new position
         positions[fromRow][fromCol] = null;
         positions[toRow][toCol] = selectedPiece;
 
+        // If move is legal, set piece's row and col
         if (lookForCheck()) {
             selectedPiece.setRow(toRow);
             selectedPiece.setCol(toCol);
         } else {
             
         }
-
-        
 
         state = CHECK;
     }
