@@ -183,6 +183,8 @@ public class Board {
         int fromCol = moveFromColRow[1];
         int toRow = moveToColRow[0];
         int toCol = moveToColRow[1];
+        ChessPiece[][] copy = new ChessPiece[positions.length][positions.length];
+        System.arraycopy(positions, 0, copy, 0, copy.length);
 
         positions[fromRow][fromCol] = null;
         positions[toRow][toCol] = selectedPiece;
