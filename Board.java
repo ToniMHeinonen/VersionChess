@@ -193,6 +193,13 @@ public class Board {
         state = CHECK;
     }
 
+    /**
+     * Checks if player's move causes check to himself or to the opponent.
+     * 
+     * If move is legal, return true. Else return false.
+     * 
+     * @return if move is legal
+     */
     private boolean lookForCheck() {
         for (Player p : players) {
             Player opponent;
