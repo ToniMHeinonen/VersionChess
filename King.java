@@ -17,6 +17,8 @@ public class King extends ChessPiece {
      * @return boolean-type when King can move.
      */
     public boolean canMove(int row, int col, ChessPiece[][] positions) {
+        int colAmount = col - getCol();
+        int rowAmount = row - getRow();
         return true;
     }
 
