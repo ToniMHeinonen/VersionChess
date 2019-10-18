@@ -203,17 +203,23 @@ public class Board {
 
             ChessPiece opponentKing = opponent.getKing();
 
-            for (ChessPiece c : playerTurn.getPieces()) {
+            for (ChessPiece c : p.getPieces()) {
                 int row = opponentKing.getRow();
                 int col = opponentKing.getCol();
                 if (c.canMove(row, col, positions)) {
-                    checkIsOn = true;
-                    break;
+                    if (p.equals(playerTurn)) {
+                        checkIsOn = true;
+                        break;
+                    } else {
+                        Print.error("Move causes check for you");
+                        state = MOVE_FROM;
+                        return false;
+                    }
                 }
             }
         }
 
-        state = NEXT_TURN;
+        return true;
     }
 
     /**
