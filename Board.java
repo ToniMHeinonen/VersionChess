@@ -187,8 +187,14 @@ public class Board {
         positions[fromRow][fromCol] = null;
         positions[toRow][toCol] = selectedPiece;
 
-        selectedPiece.setRow(toRow);
-        selectedPiece.setCol(toCol);
+        if (lookForCheck()) {
+            selectedPiece.setRow(toRow);
+            selectedPiece.setCol(toCol);
+        } else {
+            
+        }
+
+        
 
         state = CHECK;
     }
