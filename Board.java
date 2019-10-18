@@ -194,20 +194,22 @@ public class Board {
     }
 
     private void lookForCheck() {
-        Player opponent;
-        if (players[0].equals(playerTurn))
-            opponent = players[1];
-        else
-            opponent = players[0];
+        for (Player p : players) {
+            Player opponent;
+            if (p.equals(players[0]))
+                opponent = players[1];
+            else
+                opponent = players[0];
 
-        ChessPiece opponentKing = opponent.getKing();
+            ChessPiece opponentKing = opponent.getKing();
 
-        for (ChessPiece c : playerTurn.getPieces()) {
-            int row = opponentKing.getRow();
-            int col = opponentKing.getCol();
-            if (c.canMove(row, col, positions)) {
-                checkIsOn = true;
-                break;
+            for (ChessPiece c : playerTurn.getPieces()) {
+                int row = opponentKing.getRow();
+                int col = opponentKing.getCol();
+                if (c.canMove(row, col, positions)) {
+                    checkIsOn = true;
+                    break;
+                }
             }
         }
 
