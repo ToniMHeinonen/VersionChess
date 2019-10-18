@@ -193,7 +193,7 @@ public class Board {
         state = CHECK;
     }
 
-    private void lookForCheck() {
+    private boolean lookForCheck() {
         for (Player p : players) {
             Player opponent;
             if (p.equals(players[0]))
