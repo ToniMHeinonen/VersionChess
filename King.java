@@ -20,6 +20,7 @@ public class King extends ChessPiece {
         int colAmount = col - getCol();
         int rowAmount = row - getRow();
 
+        // King can only move one spot at a time.
         if (Math.abs(colAmount) > 1 || Math.abs(rowAmount) > 1) {
             return false;
         }
