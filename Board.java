@@ -207,11 +207,16 @@ public class Board {
                 int row = opponentKing.getRow();
                 int col = opponentKing.getCol();
                 if (c.canMove(row, col, positions)) {
+                    // If player's move causes check for opponent
                     if (p.equals(playerTurn)) {
                         checkIsOn = true;
                         break;
-                    } else {
+                    } 
+                    // If player's move causes check for himself,
+                    // return false and print error
+                    else {
                         Print.error("Move causes check for you");
+                        checkIsOn = false;
                         state = MOVE_FROM;
                         return false;
                     }
