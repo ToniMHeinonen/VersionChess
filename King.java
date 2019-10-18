@@ -20,12 +20,13 @@ public class King extends ChessPiece {
         int colAmount = col - getCol();
         int rowAmount = row - getRow();
 
+        // If King is moving diagonally, it must always move same amount of rows and columns.
         if (rowAmount != 0 && colAmount != 0) {
             if (Math.abs(rowAmount) != Math.abs(colAmount)) {
                 return false;
             }
         }
-        
+
         return true;
     }
 
