@@ -184,8 +184,7 @@ public class Board {
         int toRow = moveToColRow[0];
         int toCol = moveToColRow[1];
         // Create copy of positions so we can reset the positions if move is illegal.
-        ChessPiece[][] copy = new ChessPiece[positions.length][positions.length];
-        System.arraycopy(positions, 0, copy, 0, copy.length);
+        ChessPiece[][] copy = Helper.copyPositions(positions);
 
         // Move piece to the new position
         positions[fromRow][fromCol] = null;
