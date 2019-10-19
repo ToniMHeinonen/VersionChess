@@ -43,18 +43,34 @@ public class Player {
         this.name = name;
     }
 
+    /**
+     * Get player's number.
+     * @return player's number
+     */
 	public int getNumber() {
 		return number;
 	}
 
+    /**
+     * Set player's number
+     * @param number player's number
+     */
 	public void setNumber(int number) {
 		this.number = number;
 	}
 
+    /**
+     * Get player's king-piece.
+     * @return player's king-piece
+     */
     public ChessPiece getKing() {
         return king;
     }
 
+    /**
+     * Set player's king-piece.
+     * @param king player's king-piece
+     */
     public void setKing(ChessPiece king) {
         this.king = king;
     }

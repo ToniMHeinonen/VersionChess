@@ -12,6 +12,10 @@ public class Rook extends ChessPiece {
             setSymbol("r");
     }
 
+    /**
+     * Determines how Rook can move
+     * @return boolean-type if Rook can move.
+     */
     public boolean canMove(int row, int col, ChessPiece[][] positions) {
         int colAmount = col - getCol();
         int rowAmount = row - getRow();

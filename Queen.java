@@ -12,6 +12,10 @@ public class Queen extends ChessPiece {
             setSymbol("q");
     }
 
+    /**
+     * Determines how Queen can move
+     * @return boolean-type if Queen can move.
+     */
     public boolean canMove(int row, int col, ChessPiece[][] positions) {
         int colAmount = col - getCol();
         int rowAmount = row - getRow();
