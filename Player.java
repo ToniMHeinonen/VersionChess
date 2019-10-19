@@ -51,6 +51,10 @@ public class Player {
 		return number;
 	}
 
+    /**
+     * Set player's number
+     * @param number player's number
+     */
 	public void setNumber(int number) {
 		this.number = number;
 	}
