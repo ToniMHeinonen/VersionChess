@@ -67,6 +67,10 @@ public class Player {
         return king;
     }
 
+    /**
+     * Set player's king-piece.
+     * @param king player's king-piece
+     */
     public void setKing(ChessPiece king) {
         this.king = king;
     }
