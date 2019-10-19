@@ -43,6 +43,10 @@ public class Player {
         this.name = name;
     }
 
+    /**
+     * Get player's number.
+     * @return player's number
+     */
 	public int getNumber() {
 		return number;
 	}
