@@ -59,6 +59,10 @@ public class Player {
 		this.number = number;
 	}
 
+    /**
+     * Get player's king-piece.
+     * @return player's king-piece
+     */
     public ChessPiece getKing() {
         return king;
     }
