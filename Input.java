@@ -23,6 +23,13 @@ public abstract class Input {
         return str;
     }
 
+    /**
+     * Get correct int-value based on min- and max-value.
+     * @param min minimum value
+     * @param max maximum value
+     * @param error error message
+     * @return correct int-value
+     */
     public static int getInt(int min, int max, String error) {
         int number;
 
