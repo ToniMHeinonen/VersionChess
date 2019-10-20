@@ -23,6 +23,10 @@ public class Player {
 
     }
 
+    /**
+     * Add chesspiece to arraylist.
+     * @param piece chesspiece to add
+     */
     public void addPiece(ChessPiece piece) {
         pieces.add(piece);
     }
