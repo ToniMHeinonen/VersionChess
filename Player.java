@@ -79,6 +79,10 @@ public class Player {
         this.king = king;
     }
 
+    /**
+     * Get chesspieces.
+     * @return chesspieces
+     */
     public ArrayList<ChessPiece> getPieces() {
         return pieces;
     } 
