@@ -3,6 +3,10 @@ import java.util.Scanner;
 public abstract class Input {
     private static Scanner input = new Scanner(System.in);
 
+    /**
+     * Get player's name.
+     * @return player's name
+     */
     public static String getString() {
         String str = "";
 
