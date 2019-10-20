@@ -31,6 +31,10 @@ public abstract class Print {
         System.out.println(border + " " + text + " " + border);
     }
 
+    /**
+     * Prints the board.
+     * @param positions positions of chesspieces
+     */
     public static void board(ChessPiece[][] positions) {
         System.out.println("   A B C D E F G H");
         System.out.println("  _________________");
