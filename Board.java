@@ -194,11 +194,11 @@ public class Board {
         if (lookForCheck()) {
             selectedPiece.setRow(toRow);
             selectedPiece.setCol(toCol);
+            state = NEXT_TURN;
         } else {
-            
+            positions = copy;
+            state = MOVE_FROM;
         }
-
-        state = CHECK;
     }
 
     /**
