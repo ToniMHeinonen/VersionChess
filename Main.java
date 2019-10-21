@@ -23,7 +23,7 @@ public class Main {
                 }
 
                 case 4: {
-                    
+                    TicTacToe tictactoe = new TicTacToe();
                 }
             }
         }
