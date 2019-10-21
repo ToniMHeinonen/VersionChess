@@ -11,6 +11,7 @@ public class Player {
 
     private ArrayList<ChessPiece> pieces = new ArrayList<>();
     private ChessPiece king;
+    private boolean checkIsOn;
 
     /**
      * Used to determine if player is a bot
@@ -85,5 +86,13 @@ public class Player {
      */
     public ArrayList<ChessPiece> getPieces() {
         return pieces;
-    } 
+    }
+
+    public boolean isCheckIsOn() {
+        return checkIsOn;
+    }
+
+    public void setCheckIsOn(boolean checkIsOn) {
+        this.checkIsOn = checkIsOn;
+    }
 }
