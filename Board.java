@@ -4,7 +4,6 @@ public class Board {
     private Player[] players = new Player[2];
     private Player playerTurn;
     private ChessPiece selectedPiece;
-    private boolean checkIsOn;
     private int state;
     private final int MOVE_FROM = 0, MOVE_TO = 1, MOVING = 2, NEXT_TURN = 3;
     /*
