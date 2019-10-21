@@ -13,6 +13,11 @@ public class Board {
     */
     private int[] moveFromColRow, moveToColRow;
 
+    /**
+     * Calls initializeChess method.
+     * 
+     * Method adds chess pieces and players.
+     */
     public Board() {
         initializeChess();
     }
