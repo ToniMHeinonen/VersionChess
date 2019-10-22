@@ -121,6 +121,10 @@ public class Board {
      */
     private void moveFrom() {
         Print.board(positions);
+        // Print check message if check is on
+        if (playerTurn.isCheckIsOn())
+            Print.msg("Check");
+
         Print.msg(playerTurn.getName() + 
             ", which chesspiece do you want to move? (A7, for example)");
         
