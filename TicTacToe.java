@@ -5,6 +5,6 @@ public class TicTacToe {
     }
 
     public void initializeTTT() {
-        
+        Print.ticTacToeBoard();
     }
 }
