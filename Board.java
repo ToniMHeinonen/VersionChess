@@ -121,6 +121,7 @@ public class Board {
      */
     private void moveFrom() {
         Print.board(positions);
+
         // Print check message if check is on
         if (playerTurn.isCheckIsOn())
             Print.msg("Check");
@@ -247,6 +248,10 @@ public class Board {
         }
 
         return true;
+    }
+
+    private boolean isCheckMate() {
+
     }
 
     /**
