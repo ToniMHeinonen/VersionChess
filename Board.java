@@ -252,6 +252,8 @@ public class Board {
 
     private boolean isCheckMate() {
         ChessPiece king = playerTurn.getKing();
+        int row = king.getRow();
+        int col = king.getCol();
 
         return false;
     }
