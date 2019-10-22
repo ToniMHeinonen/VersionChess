@@ -6,6 +6,7 @@ public class TicTacToe {
     }
 
     public void initializeTTT() {
+        TTTBoard = new String[3][3];
         Print.ticTacToeBoard();
     }
 }
