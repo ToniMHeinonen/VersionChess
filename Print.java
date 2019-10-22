@@ -77,6 +77,7 @@ public abstract class Print {
     }
 
     public static void ticTacToeBoard() {
-        
+        System.out.println("   A B C");
+        System.out.println("  ________");
     }
 }
