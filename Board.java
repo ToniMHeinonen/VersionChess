@@ -255,6 +255,12 @@ public class Board {
         int row = king.getRow();
         int col = king.getCol();
 
+        for (int r = -1; r <= 1; r++) {
+            for (int c = -1; c <= 1; c++) {
+                
+            }
+        }
+
         return false;
     }
 
