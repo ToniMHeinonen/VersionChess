@@ -75,4 +75,8 @@ public abstract class Print {
         System.out.println("Information about chess.");
         Input.waitForEnter("Press enter to continue");
     }
+
+    public static void ticTacToeBoard() {
+        
+    }
 }
