@@ -1,4 +1,5 @@
 public class TicTacToe {
+    private String[][] TTTBoard;
 
     public TicTacToe() {
         initializeTTT();
