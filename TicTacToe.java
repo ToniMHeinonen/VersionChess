@@ -19,6 +19,9 @@ public class TicTacToe {
             int col = position[1];
             if (TTTBoard[row][col] != null) {
                 Print.error("Spot is already occupied");
+            } else {
+                TTTBoard[row][col] = "X";
+                break;
             }
         }
     }
