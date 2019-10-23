@@ -9,4 +9,8 @@ public class TicTacToe {
         TTTBoard = new String[3][3];
         Print.ticTacToeBoard();
     }
+
+    public void play() {
+        
+    }
 }
