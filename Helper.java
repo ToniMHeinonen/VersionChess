@@ -6,7 +6,6 @@ public abstract class Helper {
         return copy;
     }
 
-    public static boolean isFree(ChessPiece[][] positions, Player curPlayer) {
-
+    public static boolean isFree(ChessPiece position, Player curPlayer) {
     }
 }
