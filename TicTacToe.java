@@ -25,4 +25,8 @@ public class TicTacToe {
             }
         }
     }
+
+    public void checkWin() {
+        
+    }
 }
