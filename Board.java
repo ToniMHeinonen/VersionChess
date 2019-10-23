@@ -259,7 +259,10 @@ public class Board {
             // If row is in bounds, loop through columns
             if (r >= 0 || r <= 7)
                 for (int c = -1; c <= 1; c++) {
-                    
+                    // If column is in bounds, check spot
+                    if (c >= 0 || c <= 7) {
+
+                    }
                 }
             }
         }
