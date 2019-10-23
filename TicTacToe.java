@@ -1,5 +1,6 @@
 public class TicTacToe {
     private String[][] TTTBoard;
+    private int[] position;
 
     public TicTacToe() {
         initializeTTT();
@@ -11,6 +12,9 @@ public class TicTacToe {
     }
 
     public void play() {
-        
+        while (true) {
+            Print.msg("Put yor mark in:");
+            position = Input.getSelectedPosition(3);
+        }
     }
 }
