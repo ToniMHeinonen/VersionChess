@@ -130,7 +130,7 @@ public class Board {
             ", which chesspiece do you want to move? (A7, for example)");
         
         while (true) { 
-            moveFromColRow = Input.getSelectedPosition();
+            moveFromColRow = Input.getSelectedPosition(8);
             int row = moveFromColRow[0];
             int col = moveFromColRow[1];
             selectedPiece = positions[row][col];
@@ -153,7 +153,7 @@ public class Board {
         Print.msg("Where do you want to move it? (A7, for example)");
         
         while (true) {
-            moveToColRow = Input.getSelectedPosition();
+            moveToColRow = Input.getSelectedPosition(8);
             int row = moveToColRow[0];
             int col = moveToColRow[1];
 
