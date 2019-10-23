@@ -64,7 +64,7 @@ public abstract class Input {
      * 
      * @return position of the chesspiece that players wants to move
      */
-    public static int[] getSelectedPosition() {
+    public static int[] getSelectedPosition(int max) {
         String str = "";
         int col = 0;
         int row = 0;
@@ -80,7 +80,7 @@ public abstract class Input {
                 row = Character.getNumericValue(str.charAt(1));
             }
 
-            if (col > 8 || col < 1 || row > 8 || row < 1) {
+            if (col > max || col < 1 || row > max || row < 1) {
                 Print.error("Out of bounds.");
             } else {
                 break;
