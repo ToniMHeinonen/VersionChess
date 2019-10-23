@@ -262,6 +262,7 @@ public class Board {
                     // If column is in bounds, check spot
                     if (c >= 0 || c <= 7) {
                         ChessPiece position = positions[r][c];
+                        
                     }
                 }
             }
