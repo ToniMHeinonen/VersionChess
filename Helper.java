@@ -7,5 +7,6 @@ public abstract class Helper {
     }
 
     public static boolean isFree(ChessPiece position, Player curPlayer) {
+        return position == null || position.getPlayer() != curPlayer;
     }
 }
