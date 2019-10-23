@@ -15,6 +15,11 @@ public class TicTacToe {
         while (true) {
             Print.msg("Put yor mark in:");
             position = Input.getSelectedPosition(3);
+            int row = position[0];
+            int col = position[1];
+            if (TTTBoard[row][col] != null) {
+                Print.error("Spot is already occupied");
+            }
         }
     }
 }
