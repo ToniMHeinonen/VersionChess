@@ -256,8 +256,11 @@ public class Board {
         int col = king.getCol();
 
         for (int r = -1; r <= 1; r++) {
-            for (int c = -1; c <= 1; c++) {
-                
+            // If row is in bounds, loop through columns
+            if (r >= 0 || r <= 7)
+                for (int c = -1; c <= 1; c++) {
+                    
+                }
             }
         }
 
