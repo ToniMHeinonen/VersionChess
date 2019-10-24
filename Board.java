@@ -265,6 +265,10 @@ public class Board {
                         
                         if (Helper.isFree(position, playerTurn)) {
                             ChessPiece[][] copy = Helper.copyPositions(positions);
+
+                            // Move king to free position
+                            positions[row][col] = null;
+                            positions[r][c] = king;
                         }
                     }
                 }
