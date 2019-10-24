@@ -26,7 +26,7 @@ public class TicTacToe {
         }
     }
 
-    public void checkWin() {
+    public boolean checkWin() {
         int hCounter = 0;
         int vCounter = 0;
 
@@ -43,7 +43,13 @@ public class TicTacToe {
                 } else {
                     vCounter = 0;
                 }
+
+                if (hCounter == 3 || vCounter == 3) {
+                    return true;
+                }
             }
         }
+
+        return false;
     }
 }
