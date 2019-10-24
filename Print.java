@@ -91,6 +91,7 @@ public abstract class Print {
                 }
                 System.out.print(output + " ");
             }
+            System.out.println();
         }
     }
 }
