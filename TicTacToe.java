@@ -27,14 +27,21 @@ public class TicTacToe {
     }
 
     public void checkWin() {
-        int counter = 0;
+        int hCounter = 0;
+        int vCounter = 0;
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (TTTBoard[i][j] == "X") {
-                    counter++;
+                    hCounter++;
                 } else {
-                    counter = 0;
+                    hCounter = 0;
+                }
+
+                if (TTTBoard[j][i] == "X") {
+                    vCounter++;
+                } else {
+                    vCounter = 0;
                 }
             }
         }
