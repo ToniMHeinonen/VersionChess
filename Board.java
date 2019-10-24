@@ -168,7 +168,7 @@ public class Board {
 
             /* If selected position is null or occupied by the opponent, check
             if the piece can move to the spot or not */
-            if (position == null || position.getPlayer() != playerTurn) {
+            if (Helper.isFree(position, playerTurn)) {
                 if (selectedPiece.canMove(row,col,positions)) {
                     state = MOVING;
                     break;
