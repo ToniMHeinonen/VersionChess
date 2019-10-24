@@ -263,6 +263,9 @@ public class Board {
                     if (c >= 0 || c <= 7) {
                         ChessPiece position = positions[r][c];
                         
+                        if (Helper.isFree(position, playerTurn)) {
+                            
+                        }
                     }
                 }
             }
