@@ -32,18 +32,22 @@ public class TicTacToe {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
+
+                // Check if player has 3 marks in a row horizontally.
                 if (TTTBoard[i][j] == "X") {
                     hCounter++;
                 } else {
                     hCounter = 0;
                 }
 
+                // Check if player has 3 marks in a row vertically.
                 if (TTTBoard[j][i] == "X") {
                     vCounter++;
                 } else {
                     vCounter = 0;
                 }
 
+                // Return true, if player has won.
                 if (hCounter == 3 || vCounter == 3) {
                     return true;
                 }
