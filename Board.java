@@ -257,10 +257,10 @@ public class Board {
 
         for (int r = -1; r <= 1; r++) {
             // If row is in bounds, loop through columns
-            if (r >= 0 || r <= 7)
+            if (r >= 0 && r <= 7)
                 for (int c = -1; c <= 1; c++) {
                     // If column is in bounds, check spot
-                    if (c >= 0 || c <= 7) {
+                    if (c >= 0 && c <= 7) {
                         ChessPiece position = positions[r][c];
                         
                         if (Helper.isFree(position, playerTurn)) {
