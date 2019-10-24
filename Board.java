@@ -264,11 +264,21 @@ public class Board {
                         ChessPiece position = positions[r][c];
                         
                         if (Helper.isFree(position, playerTurn)) {
-                            ChessPiece[][] copy = Helper.copyPositions(positions);
+                            ChessPiece[][] copy = 
+                                Helper.copyPositions(positions);
 
                             // Move king to free position
                             positions[row][col] = null;
                             positions[r][c] = king;
+
+                            // If not checked anymore, reset positions
+                            // and return false.
+                            if (lookForCheck()) {
+                                positions = copy;
+                                return false;
+                            }
+
+                            positions = copy;
                         }
                     }
                 }
