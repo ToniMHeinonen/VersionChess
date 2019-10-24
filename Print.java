@@ -79,5 +79,18 @@ public abstract class Print {
     public static void ticTacToeBoard(String[][] TTTBoard) {
         System.out.println("   A B C");
         System.out.println("  ________");
+
+        for (int i = 0; i < 3; i++) {
+            System.out.print(i + "  ");
+            for (int j = 0; j < 3; j++) {
+                String output;
+                if (TTTBoard[i][j] == null) {
+                    output = " ";
+                } else {
+                    output = TTTBoard[i][j];
+                }
+                System.out.print(output + " ");
+            }
+        }
     }
 }
