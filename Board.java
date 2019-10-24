@@ -264,7 +264,7 @@ public class Board {
                         ChessPiece position = positions[r][c];
                         
                         if (Helper.isFree(position, playerTurn)) {
-                            
+                            ChessPiece[][] copy = Helper.copyPositions(positions);
                         }
                     }
                 }
