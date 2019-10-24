@@ -76,7 +76,7 @@ public abstract class Print {
         Input.waitForEnter("Press enter to continue");
     }
 
-    public static void ticTacToeBoard() {
+    public static void ticTacToeBoard(String[][] TTTBoard) {
         System.out.println("   A B C");
         System.out.println("  ________");
     }
