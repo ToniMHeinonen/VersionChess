@@ -68,6 +68,7 @@ public class TicTacToe {
                 }
             }
 
+            // If player has 3 marks in a row, return true.
             if (dCounterUpDown == 3 || dCounterDownUp == 3 || hCounter == 3 || vCounter == 3) {
                 return true;
             }
