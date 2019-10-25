@@ -251,10 +251,12 @@ public class Board {
     }
 
     private boolean isCheckMate() {
+        // Get king and it's position
         ChessPiece king = playerTurn.getKing();
         int row = king.getRow();
         int col = king.getCol();
 
+        // Check if king can move or not
         for (int r = -1; r <= 1; r++) {
             // If row is in bounds, loop through columns
             if (r >= 0 && r <= 7)
@@ -278,6 +280,7 @@ public class Board {
                                 return false;
                             }
 
+                            // Reset positions regardless
                             positions = copy;
                         }
                     }
