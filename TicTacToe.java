@@ -1,6 +1,8 @@
 public class TicTacToe {
     private String[][] TTTBoard;
     private int[] position;
+    private String playerMark = "X";
+    private String AIMark = "O";
 
     public TicTacToe() {
         initializeTTT();
