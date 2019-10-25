@@ -104,4 +104,8 @@ public class Player {
     public void setPiecesCausingCheck(ArrayList<ChessPiece> piecesCausingCheck) {
         this.piecesCausingCheck = piecesCausingCheck;
     }
+
+    public void addPieceCausingCheck(ChessPiece piece) {
+        piecesCausingCheck.add(piece);
+    }
 }
