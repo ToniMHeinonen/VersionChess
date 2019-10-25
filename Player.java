@@ -12,7 +12,7 @@ public class Player {
     private ArrayList<ChessPiece> pieces = new ArrayList<>();
     private ChessPiece king;
     private boolean checkIsOn;
-    private ChessPiece pieceCausingCheck;
+    private ArrayList<ChessPiece> piecesCausingCheck;
 
     /**
      * Used to determine if player is a bot
@@ -97,11 +97,11 @@ public class Player {
         this.checkIsOn = checkIsOn;
     }
 
-    public ChessPiece getPieceCausingCheck() {
-        return pieceCausingCheck;
+    public ArrayList<ChessPiece> getPiecesCausingCheck() {
+        return piecesCausingCheck;
     }
 
-    public void setPieceCausingCheck(ChessPiece pieceCausingCheck) {
-        this.pieceCausingCheck = pieceCausingCheck;
+    public void setPiecesCausingCheck(ArrayList<ChessPiece> piecesCausingCheck) {
+        this.piecesCausingCheck = piecesCausingCheck;
     }
 }
