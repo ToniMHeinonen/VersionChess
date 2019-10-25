@@ -23,13 +23,13 @@ public class TicTacToe {
                 Print.error("Spot is already occupied");
             } else {
                 TTTBoard[row][col] = "X";
-                checkWin();
+                checkWin(playerMark);
                 break;
             }
         }
     }
 
-    public boolean checkWin() {
+    public boolean checkWin(String mark) {
         int hCounter = 0;
         int vCounter = 0;
         int dCounterUpDown = 0;
@@ -39,14 +39,14 @@ public class TicTacToe {
         for (int i = 0; i < 3; i++) {
 
             // Check if player has 3 marks in a row diagonally.
-            if (TTTBoard[i][i] == "X") {
+            if (TTTBoard[i][i] == mark) {
                 dCounterUpDown++;
             } else {
                 dCounterUpDown = 0;
             }
 
             // Check if player has 3 marks in a row diagonally.
-            if (TTTBoard[i][counter] == "X") {
+            if (TTTBoard[i][counter] == mark) {
                 dCounterDownUp++;
             } else {
                 dCounterDownUp = 0;
@@ -56,14 +56,14 @@ public class TicTacToe {
             for (int j = 0; j < 3; j++) {
 
                 // Check if player has 3 marks in a row horizontally.
-                if (TTTBoard[i][j] == "X") {
+                if (TTTBoard[i][j] == mark) {
                     hCounter++;
                 } else {
                     hCounter = 0;
                 }
 
                 // Check if player has 3 marks in a row vertically.
-                if (TTTBoard[j][i] == "X") {
+                if (TTTBoard[j][i] == mark) {
                     vCounter++;
                 } else {
                     vCounter = 0;
