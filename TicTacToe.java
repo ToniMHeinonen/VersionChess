@@ -30,20 +30,29 @@ public class TicTacToe {
     public boolean checkWin() {
         int hCounter = 0;
         int vCounter = 0;
-        int dCounter = 0;
+        int dCounterUpDown = 0;
+        int dCounterDownUp = 0;
+        int counter = 2;
 
         for (int i = 0; i < 3; i++) {
 
             // Check if player has 3 marks in a row diagonally.
             if (TTTBoard[i][i] == "X") {
-                dCounter++;
+                dCounterUpDown++;
             } else {
-                dCounter = 0;
+                dCounterUpDown = 0;
             }
 
-            if (dCounter == 3) {
+            if (dCounterUpDown == 3) {
                 return true;
             }
+
+            if (TTTBoard[i][counter] == "X") {
+                dCounterDownUp++;
+            } else {
+                dCounterDownUp = 0;
+            }
+            counter--;
 
             for (int j = 0; j < 3; j++) {
 
