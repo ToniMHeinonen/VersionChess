@@ -30,8 +30,20 @@ public class TicTacToe {
     public boolean checkWin() {
         int hCounter = 0;
         int vCounter = 0;
+        int dCounter = 0;
 
         for (int i = 0; i < 3; i++) {
+
+            if (TTTBoard[i][i] == "X") {
+                dCounter++;
+            } else {
+                dCounter = 0;
+            }
+
+            if (dCounter == 3) {
+                return true;
+            }
+
             for (int j = 0; j < 3; j++) {
 
                 // Check if player has 3 marks in a row horizontally.
