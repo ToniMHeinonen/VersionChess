@@ -51,10 +51,6 @@ public class TicTacToe {
             }
             counter--;
 
-            if (dCounterUpDown == 3 || dCounterDownUp == 3) {
-                return true;
-            }
-
             for (int j = 0; j < 3; j++) {
 
                 // Check if player has 3 marks in a row horizontally.
@@ -70,11 +66,10 @@ public class TicTacToe {
                 } else {
                     vCounter = 0;
                 }
+            }
 
-                // Return true, if player has won.
-                if (hCounter == 3 || vCounter == 3) {
-                    return true;
-                }
+            if (dCounterUpDown == 3 || dCounterDownUp == 3 || hCounter == 3 || vCounter == 3) {
+                return true;
             }
         }
 
