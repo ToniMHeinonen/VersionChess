@@ -108,4 +108,8 @@ public class Player {
     public void addPieceCausingCheck(ChessPiece piece) {
         piecesCausingCheck.add(piece);
     }
+
+    public void clearPiecesCausingCheck() {
+        piecesCausingCheck.clear();
+    }
 }
