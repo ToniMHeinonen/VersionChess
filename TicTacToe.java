@@ -43,10 +43,6 @@ public class TicTacToe {
                 dCounterUpDown = 0;
             }
 
-            if (dCounterUpDown == 3) {
-                return true;
-            }
-
             // Check if player has 3 marks in a row diagonally.
             if (TTTBoard[i][counter] == "X") {
                 dCounterDownUp++;
@@ -54,6 +50,10 @@ public class TicTacToe {
                 dCounterDownUp = 0;
             }
             counter--;
+
+            if (dCounterUpDown == 3 || dCounterDownUp == 3) {
+                return true;
+            }
 
             for (int j = 0; j < 3; j++) {
 
