@@ -34,6 +34,7 @@ public class TicTacToe {
 
         for (int i = 0; i < 3; i++) {
 
+            // Check if player has 3 marks in a row diagonally.
             if (TTTBoard[i][i] == "X") {
                 dCounter++;
             } else {
