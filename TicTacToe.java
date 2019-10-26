@@ -23,6 +23,7 @@ public class TicTacToe {
                 Print.error("Spot is already occupied");
             } else {
                 TTTBoard[row][col] = playerMark;
+                Print.ticTacToeBoard(TTTBoard);
                 aiTurn();
             }
             if (checkWin(playerMark)) {
