@@ -29,6 +29,10 @@ public class TicTacToe {
         }
     }
 
+    public void aiTurn() {
+        
+    }
+
     public boolean checkWin(String mark) {
         int hCounter = 0;
         int vCounter = 0;
