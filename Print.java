@@ -81,7 +81,7 @@ public abstract class Print {
         System.out.println("  ________");
 
         for (int i = 0; i < 3; i++) {
-            System.out.print(i + "  ");
+            System.out.print(i + 1 + "  ");
             for (int j = 0; j < 3; j++) {
                 String output;
                 if (TTTBoard[i][j] == null) {
