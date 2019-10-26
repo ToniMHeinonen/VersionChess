@@ -30,7 +30,14 @@ public class TicTacToe {
     }
 
     public void aiTurn() {
-        
+        for (int i = 0; i < 3; i ++) {
+            for (int j = 0; j < 3; j++) {
+                if (TTTBoard[i][j] == null) {
+                    TTTBoard[i][j] = AIMark;
+                    break;
+                }
+            }
+        }
     }
 
     public boolean checkWin(String mark) {
