@@ -289,6 +289,11 @@ public class Board {
             }
         }
 
+        // Check if pieces causing check can be eaten
+        for (ChessPiece c : playerTurn.getPieces()) {
+
+        }
+
         return false;
     }
 
