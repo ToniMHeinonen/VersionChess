@@ -233,6 +233,7 @@ public class Board {
                     // If player's move causes check for opponent
                     if (p.equals(playerTurn)) {
                         opponent.setCheckIsOn(true);
+                        opponent.addPieceCausingCheck(c);
                         break;
                     } 
                     // If player's move causes check for himself,
