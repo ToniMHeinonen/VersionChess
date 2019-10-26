@@ -291,6 +291,12 @@ public class Board {
 
         // Check if pieces causing check can be eaten
         for (ChessPiece c : playerTurn.getPieces()) {
+            // If there are more than one pieces causing check,
+            // they can't be eaten
+            if (playerTurn.getPiecesCausingCheck().size() > 1) {
+                break;
+            }
+            
             for (ChessPiece piece : playerTurn.getPiecesCausingCheck()) {
 
             }
