@@ -95,6 +95,10 @@ public class Player {
 
     public void setCheckIsOn(boolean checkIsOn) {
         this.checkIsOn = checkIsOn;
+
+        // If check is not on, clear pieces
+        if (!checkIsOn)
+            piecesCausingCheck.clear();
     }
 
     public ArrayList<ChessPiece> getPiecesCausingCheck() {
