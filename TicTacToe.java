@@ -31,6 +31,7 @@ public class TicTacToe {
             }
             if (checkWin(AIMark)) {
                 System.out.println("AI wins!");
+                break;
             }
         }
     }
