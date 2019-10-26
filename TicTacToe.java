@@ -22,8 +22,11 @@ public class TicTacToe {
             if (TTTBoard[row][col] != null) {
                 Print.error("Spot is already occupied");
             } else {
-                TTTBoard[row][col] = "X";
-                checkWin(playerMark);
+                TTTBoard[row][col] = playerMark;
+                aiTurn();
+            }
+            if (checkWin(playerMark)) {
+                System.out.println("Player wins!");
                 break;
             }
         }
