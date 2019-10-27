@@ -298,7 +298,11 @@ public class Board {
             }
             
             for (ChessPiece piece : playerTurn.getPiecesCausingCheck()) {
-
+                int row = piece.getRow();
+                int col = piece.getCol();
+                if (c.canMove(row, col, positions)) {
+                    
+                }
             }
         }
 
