@@ -260,7 +260,7 @@ public class Board {
         // Check if king can move or not
         for (int r = -1; r <= 1; r++) {
             // If row is in bounds, loop through columns
-            if (r >= 0 && r <= 7)
+            if (r >= 0 && r <= 7) {
                 for (int c = -1; c <= 1; c++) {
                     // If column is in bounds, check spot
                     if (c >= 0 && c <= 7) {
@@ -307,6 +307,10 @@ public class Board {
         }
 
         return false;
+    }
+
+    public void testIfCheck(ChessPiece piece, int toRow, int toCol) {
+
     }
 
     /**
