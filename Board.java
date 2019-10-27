@@ -286,10 +286,14 @@ public class Board {
             }
             
             for (ChessPiece piece : playerTurn.getPiecesCausingCheck()) {
-                int row = piece.getRow();
-                int col = piece.getCol();
-                if (c.canMove(row, col, positions)) {
-                    
+                int ro = piece.getRow();
+                int co = piece.getCol();
+                if (c.canMove(ro, co, positions)) {
+                    // If there is no new check after eating the piece,
+                    // return false
+                    if (testIfCheck(c, ro, co)) {
+                        return false;
+                    }
                 }
             }
         }
