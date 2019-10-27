@@ -35,6 +35,10 @@ public class TicTacToe {
                 System.out.println("AI wins!");
                 break;
             }
+            if (checkDraw()) {
+                System.out.println("Draw.");
+                break;
+            }
         }
     }
 
