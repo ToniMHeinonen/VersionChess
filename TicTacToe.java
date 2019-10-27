@@ -42,6 +42,10 @@ public class TicTacToe {
         }
     }
 
+    /**
+     * Check if there are any spots available.
+     * @return false if there are spots available
+     */
     public boolean checkDraw() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
