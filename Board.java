@@ -267,8 +267,10 @@ public class Board {
                         ChessPiece position = positions[r][c];
                         
                         if (Helper.isFree(position, playerTurn)) {
-                            // If not checked anymore, reset positions
-                            // and return false.
+                            // If not checked anymore, return false
+                            if (!testIfCheck(king, r, c)) {
+                                return false;
+                            }
                         }
                     }
                 }
