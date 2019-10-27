@@ -25,6 +25,7 @@ public class TicTacToe {
                 TTTBoard[row][col] = playerMark;
                 Print.ticTacToeBoard(TTTBoard);
                 aiTurn();
+                Print.ticTacToeBoard(TTTBoard);
             }
             if (checkWin(playerMark)) {
                 System.out.println("Player wins!");
