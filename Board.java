@@ -267,22 +267,8 @@ public class Board {
                         ChessPiece position = positions[r][c];
                         
                         if (Helper.isFree(position, playerTurn)) {
-                            ChessPiece[][] copy = 
-                                Helper.copyPositions(positions);
-
-                            // Move king to free position
-                            positions[row][col] = null;
-                            positions[r][c] = king;
-
                             // If not checked anymore, reset positions
                             // and return false.
-                            if (lookForCheck()) {
-                                positions = copy;
-                                return false;
-                            }
-
-                            // Reset positions regardless
-                            positions = copy;
                         }
                     }
                 }
@@ -309,8 +295,24 @@ public class Board {
         return false;
     }
 
-    public void testIfCheck(ChessPiece piece, int toRow, int toCol) {
+    public boolean testIfCheck(ChessPiece piece, int toRow, int toCol) {
+        ChessPiece[][] copy = 
+            Helper.copyPositions(positions);
 
+        // Move king to free position
+        positions[piece.getRow()][piece.getCol()] = null;
+        positions[toRow][toCol] = piece;
+
+        // If check is not happening, return false
+        if (lookForCheck()) {
+            positions = copy;
+            return false;
+        } 
+        // Else return true
+        else {
+            positions = copy;
+            return true;
+        }
     }
 
     /**
